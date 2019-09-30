@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="pagina_mantenimiento.Master.cs"
+    Inherits="Inicial.Vista.master.pagina_mantenimiento" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>
+        <asp:ContentPlaceHolder ID="titulo" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <script src="../../Recursos/js/jquery.js" type="text/javascript"></script>
+    <link href="../../Recursos/css/general.css" rel="stylesheet" type="text/css" />
+    <link href="../../Recursos/css/paginaMaestra.css" rel="stylesheet" type="text/css" />
+    <script src="../../Recursos/js/validarCampos.js" type="text/javascript"></script>
+    <script src="../../Recursos/js/ajax/paginaMaestra.js" type="text/javascript"></script>
+    <script src="../../Recursos/js/ajax/mantenimiento.js" type="text/javascript"></script>
+    <% 
+        if ((Session["nom_usuario"]) != null)
+        {
+    %>
+    <!-- Estilos para el menu -->
+    <link href="../../Recursos/css/menu.css" rel="stylesheet" type="text/css" />
+    <% }
+        else
+        { %>
+    <!-- Estilos para el formulario de login -->
+    <link href="../../Recursos/css/login.css" rel="stylesheet" type="text/css" />
+    <% } %>
+</head>
+<body>
+    <table id="tbContenedor">
+        <tr>
+            <td colspan="2">
+                <table class="tbBanner" border="0px">
+                    <tr>
+                        <td class="bannerProducto">
+                            <img src="../../Recursos/imagenes/paginaMaestra/producto.png" alt="Nom Producto" />
+                        </td>
+                        <td class="centroBanner">
+                        </td>
+                        <td class="bannerEmpresa">
+                            <%if (Session["imagen_empresa"] == null)
+                              {  %><img src="../../Recursos/imagenes/paginaMaestra/lcweb.png" alt="LC WEB Consultores" />
+                            <%}
+                              else
+                              { %>
+                            <img src="../../logos/<%Response.Write(Session["imagen_empresa"].ToString());%>" />
+                            <%} %>
+                        </td>
+                    </tr>
+                    <%if (Session["nom_usuario"] != null)
+                      {  %>
+                    <tr>
+                        <%
+                            if (Session["director"] == "1")
+                            {%>
+                        <td colspan="3">
+                            <table width="100%">
+                                <tr>
+                                    <td class="barraSesionUsuario">
+                                        En sesi&oacute;n: &nbsp;&nbsp;
+                                        <% Response.Write(Session["nom_usuario"]);%>
+                                    </td>
+                                    <td class="barraSesionEmpresa">
+                                        <%
+                                            if (Session["director"] == "1")
+                                            {
+                                                Response.Write("Empresa Actual: " + Session["nombre_empresa"]);
+                                            }
+                                        %>
+                                    </td>
+                                    <td class="barraSesionSalir">
+                                        <script src="../../Recursos/js/ajax/cerrarSesion.js" type="text/javascript"></script>
+                                        <a href='javascript:void(0)' onclick="cerrarSesion('1')">.:: Cerrar Sesi&oacute;n ::.
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <%}
+                            else
+                            {%>
+                        <td class="barraSesionUsuario" colspan="2">
+                            En sesi&oacute;n: &nbsp;&nbsp;
+                            <% Response.Write(Session["nom_usuario"]);%>
+                        </td>
+                        <td class="barraSesionSalir">
+                            <script src="../../Recursos/js/ajax/cerrarSesion.js" type="text/javascript"></script>
+                            <a href='javascript:void(0)' onclick="cerrarSesionMantenimiento()">.:: Cerrar Sesi&oacute;n
+                                ::. </a>
+                        </td>
+                        <%} %>
+                    </tr>
+                    <%
+                        }%>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="alinearArriba">
+                <div id="divContenidoForm">
+                    <asp:ContentPlaceHolder ID="contenidoSistema" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" class="piePagina">
+                <a href="http://www.lcweb.co" target="_blank">
+                    <img src="../../Recursos/imagenes/paginaMaestra/lcweb.png" alt="LC WEB Consultores" /></a>
+                <br />
+                <span id="piePagina">&reg; Todos los Derechos Reservados - All rights reserved - LC
+                    WEB Consultores
+                    <br />
+                    Colombia -
+                    <% Response.Write(DateTime.Now.Year); %>
+                </span>
+            </td>
+        </tr>
+    </table>
+    <div id="ventana" class="ventanaConfirmacion ocultar">
+        <table>
+            <tr>
+                <td class="encabezado">
+                    <span>Mensaje</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="msjVentana" class="msjVentana">
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="ventanaProg" class="ventanaConfirmacion ocultar">
+        <table>
+            <tr>
+                <td class="encabezado">
+                    <span>Mensaje</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="msjVentanaProg" class="msjVentana">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div id="divProgreso">
+                        <img src="../../Recursos/imagenes/generales/progress_bar.gif" title="Progreso" alt="Procesando..." /></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--Ventana con Mensaje para Confirmar Eliminación-->
+    <div style="display: none;">
+        <div id="confirmaEliminar" class="fancyEliminar">
+            <table class="centrar">
+                <tr>
+                    <td class="encabezado">
+                        <span>Mensaje</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>&#191;CONFIRMA QUE DESEA ELIMINAR ESTA INFORMACI&Oacute;N &#63;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table>
+                            <tr>
+                                <td align="center">
+                                    <span>Aceptar</span><br />
+                                    <img src="../../Recursos/imagenes/administracion/aceptar.png" onclick="eliminar()"
+                                        alt="Aceptar" class="imgAdmin" />
+                                </td>
+                                <td align="center">
+                                    <span>Cancelar</span><br />
+                                    <img src="../../Recursos/imagenes/administracion/cancelar.png" onclick="cancelaEliminar()"
+                                        alt="Cancelar" class="imgAdmin" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

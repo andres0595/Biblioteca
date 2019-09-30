@@ -1,0 +1,1156 @@
+﻿/*la imagen background se repite en x y en y para asi dar el aspecto de lineas cruzadas*/
+body
+{
+    font-family: Trebuchet MS, Tahoma;
+    font-size: 12px;
+    background-color: white;
+    padding:0% 0% 0% 0%;
+    margin:0% 0% 0% 0%;
+}
+
+.inactive {
+   pointer-events: none;
+   cursor: default;
+}
+/*Campos obligatorios*/
+.obligatorio
+{
+    border-left: #FF2424 solid 4px !important;
+}
+
+/*Hace que se vea cualquier letra que se escriba como mayuscula*/
+.campoMayuscula
+{
+    text-transform: uppercase;
+}
+/* Esta clase csss permite que cualquier letra que se escriba sea convertida a minuscula */
+.campoMinuscula
+{
+    text-transform: lowercase;
+}
+
+/* Esta clase a diferencia de las demas, para el control textbox define su dimension en width (80)*/
+.campoTextoCorto
+{
+    border: 1px groove #4088B7;
+    font-size: 14px;
+    color: #545454;
+    width: 80px;
+    height: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* Esta clase a diferencia de las demas, para el control textbox define su dimension en width (150)*/
+.campoTexto
+{
+    border: 1px groove #4088B7;
+    font-size: 14px;
+    color: #545454;
+    width: 150px;
+    height: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+/* Esta clase a diferencia de las demas, para el control textbox define su dimension en width (300)*/
+.campoTextoMedio
+{
+    border: 1px groove #4088B7;
+    font-size: 14px;
+    color: #545454;
+    width: 300px;
+    height: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+/* Esta clase a diferencia de las demas, para el control textbox define su dimension en width (400)*/
+.campoTextoLargo
+{
+    border: 1px groove #4088B7;
+    font-size: 14px;
+    color: #545454;
+    width: 400px;
+    height: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+
+.selectObligatorio
+{
+    border: 1px groove #4088B7;
+    font-size: 14px;
+    color: #545454;
+    width: 158px;
+    height: 23px;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+    border-left-color: Red;
+    border-left-width: 5px;
+}
+
+.select
+{
+    border: 1px groove #545454;
+    font-size: 14px;
+    color: #545454;
+    width: 155px;
+    height: 23px;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+.selectCorto
+{
+    border: 1px groove #545454;
+    font-size: 14px;
+    color: #545454;
+    width: 80px;
+    height: 23px;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+
+
+.selectMedio
+{
+    border: 1px groove #545454;
+    font-size: 14px;
+    color: #545454;
+    width: 130px;
+    height: 23px;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+.selectHora
+{
+    border: 1px groove #545454;
+    font-size: 14px;
+    color: #545454;
+    width: 50px;
+    height: 23px;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+.selectLargo
+{
+    border: 1px groove #545454;
+    font-size: 14px;
+    color: #545454;
+    width: 350px;
+    height: 23px;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+/*Select multiple*/
+.selectMultiple
+{
+    border: 1px groove #4088B7;
+    font-size: 14px;
+    color: #545454;
+    width: 150px;
+    height: 100px;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+/*Division del mensaje que se le muestra al usuario cuando se ejecuta una acción*/
+.msjVentana
+{
+    color: #618697;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*atributos de fuenta para el mensaje que se le muestra al usuario cuando se ejecuta una acción*/
+.msj
+{
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/*Imagenes de los administradores (guardar, eliminar, ....)*/
+.imgAdmin
+{
+    /*width: 40px;*/
+    height: 40px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/*Imagenes tras pasar el mouse encima de este div (guardar, eliminar, ....)*/
+.imgAdmin:hover
+{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    margin: 15px 8px 0px 7px;
+}
+
+/*Imagenes de los administradores (guardar, eliminar, ....)*/
+.imgAdmin1
+{
+    /*width: 40px;*/
+    height: 18px;
+    cursor: pointer;
+   /* margin: 10px;*/
+}
+
+/*Imagenes tras pasar el mouse encima de este div (guardar, eliminar, ....)*/
+.imgAdmin1:hover
+{
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    margin: 5px 0px 0px 2px;
+}
+/*Dimensiones para la division de imagenes de cambia clave*/
+.imgCambioClave
+{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 10px;
+}
+/*Dimensiones para la division de imagenes de cambia clave al momento de pasar el mouse*/
+.imgCambioClave:hover
+{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    margin: 0px 8px 15px 7px;
+}
+
+.tamanioImagenInicio
+{
+     width: 480px;
+     height: 180px;
+}
+/*Pone divs y tablas en el centro horizontalmente*/
+.centrar
+{
+  margin: auto;
+}
+.centrarLogin
+{
+  margin: auto;
+  width: 828px;
+}
+
+.centrarPie
+{
+     margin: auto;
+}
+/* titulos de las imagenes de admin */
+.leyenda
+{
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* estilo de los titulos de los formularios */
+span.tituloForm
+{
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: auto;
+}
+/* Atributos generales de fuenta para los span*/
+span
+{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/* Estilo para la textarea de la información */
+
+textarea.descripcion
+{
+    border: 1px groove #4088B7;
+    min-width: 500px;
+    max-width: 200px;
+    min-height: 50px;
+    max-height: 100px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+
+textarea.descripcionFormato
+{
+    border: 1px groove #4088B7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+     min-height: 50px;
+    max-height: 100px;
+}
+
+.descripcionPredeterminada
+{
+    border: 1px groove #4088B7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px;
+}
+
+/* darle un borde a las tablas contenedoras de los formularios */
+.tbBorde
+{
+    margin:auto;
+    /*width: 850px;*/
+    width:98.5%;
+    border: 2px solid #CFCFCF;
+    border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+    padding: 2px;
+}
+/* ----------------------------------------------------------------------------------------- 
+    INICIO BLOQUE DE ESTILOS PARA LOS LISTADOS DE MENUS; CONTACTO; ETC...
+
+cuerpoListado1  80px   #DFDFDF
+cuerpoListado2  80px   #E9E5E5
+
+cuerpoListado3  140px  #DFDFDF
+cuerpoListado4  140px  #E9E5E5
+
+cuerpoListado5  150px  #DFDFDF
+cuerpoListado6  150px  #E9E5E5
+
+cuerpoListado7  320px  #DFDFDF 
+cuerpoListado8  320px  #E9E5E5
+
+cuerpoListado9   340px  #DFDFDF 
+cuerpoListado10  340px  #E9E5E5 
+
+
+*/
+
+td.encabezado /*letra del encabezado */
+{
+    background-color: #016678;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/*Estilos de las filas que contienen la información*/
+.cuerpoListado1
+{
+    background-color: #E9E5E5;
+   /* width: 80px;*/
+}
+
+.cuerpoListado2
+{
+    background-color: #DFDFDF;
+    width: 80px;
+}
+
+.cuerpoListado3
+{
+    background: #E9E5E5;
+    width: 140px;
+}
+
+.cuerpoListado4
+{
+    background: #DFDFDF;
+    width: 140px;
+}
+
+.cuerpoListado5
+{
+    background-color: #E9E5E5;
+    width: 150px;
+}
+
+.cuerpoListado6
+{
+    background-color: #E9E5E5;
+    width: 150px;
+}
+
+.cuerpoListado7
+{
+    background-color: #E9E5E5;
+    width: 320px;
+}
+
+.cuerpoListado8
+{
+    background-color: #DFDFDF;
+    width: 320px;
+}
+
+.cuerpoListado9
+{
+    background-color: #E9E5E5;
+    width: 340px;
+}
+
+.cuerpoListado10
+{
+    background-color: #DFDFDF;
+    width: 340px;
+}
+
+.cuerpoListado11
+{
+    background-color: #016678;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    width: 900px;
+}
+
+
+.listadoGeneral
+{
+    border: 1px solid #103B60;
+    border-radius: 5px;
+    /*width: 850px;*/
+    width: 99%;
+    padding: 5px;
+    text-align: center;
+}
+
+.responsive{
+    width:100%;
+}
+
+.listadoBorde
+{
+    border: 1px solid #103B60;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.listadoGeneral700
+{
+    border: 1px solid #103B60;
+    border-radius: 5px;
+    width: 700px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.listadoGeneralDetalle
+{
+    border: 1px solid #103B60;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+/*Estilos de los enlaces de la informacion mostrada*/
+
+a.listado
+{
+    color: #000;
+}
+/* Quitar estilos a los enlaces en el sistema y definiendoles un color */
+a
+{
+    text-decoration: none;
+    /*color: #FCFCFC;*/
+    /*color: #000000*/;
+}
+
+/* ----------------------------------------------------------------------------------------- 
+    FIN BLOQUE DE ESTILOS PARA LOS LISTADOS DE MENUS; CONTACTO; ETC...
+*/
+
+
+
+/* estilo que permite al contenido alinearse en la parte superior*/
+.alinearArriba
+{
+    vertical-align: top;
+}
+/* estilos del link de mantenimiento*/
+span.mantenimiento a
+{
+    background-color: #CFCFCF;
+    text-align: center;
+    color: #545454;
+    padding: 5px;
+    margin: 2px;
+    font-size: 12px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 10px 0px 10px 0px;
+    -o-border-radius: 10px 0px 10px 0px;
+    -webkit-border-radius: 10px 0px 10px 0px;
+    -moz-border-radius: 10px 0px 10px 0px;
+}
+
+
+
+/* Estilo del Salir del formulario de Mantenimiento */
+span.mantenimiento a:hover
+{
+    background-color: #545454;
+    color: #CFCFCF;
+}
+
+/* SE generan atributos de fuente como el color y el grosor al enlace que tenga asignada la clase salir*/
+a.salir
+{
+    font-weight: bold;
+    color: #545454;
+}
+
+/*Hover de la anterior clase salir*/
+a.salir:hover
+{
+    color: #CFCFCF;
+}
+/* se asigna un cursor y un color negro para la fuente contenida en este enlace*/
+span.listadoMantenimiento a
+{
+    cursor: pointer;
+    color: #000;
+}
+
+/* estilo de la ventana donde se muestran los mensajes */
+.ventanaConfirmacion
+{
+    border: 10px outset #016678;
+    background-color: #FFF;
+    position: absolute;
+    top: 200px;
+    left: 40%;
+    height: 100px;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    -o-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    z-index: 9999;
+}
+
+.ventanaConfirmacion table tr td.encabezado
+{
+    width: 400px;
+    text-align: left;
+}
+
+
+.ventanaConfirmacionGrandeScroll
+{
+    border: 10px outset #FF8F0A;
+    background-color: #FFF;
+    position: absolute;
+    top: 200px;
+    left: 30%;
+    height: 300px;
+    width: 800px;
+    text-align: left;
+    border-radius: 10px 10px 10px 10px;
+    -o-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    overflow: auto;
+}
+
+.ventanaConfirmacionGrandeScroll table tr td.encabezado
+{
+    width: 750px;
+    text-align: left;
+}
+
+/* atrinutos de la ventana de confirmacion donde se manejan estilos para el borde, dimensiones, posiciones etc...*/
+.ventanaConfirmacionMedianaScroll
+{
+    border: 10px outset #FF8F0A;
+    background-color: #FFF;
+    position: absolute;
+    top: 200px;
+    left: 40%;
+    height: 300px;
+    width: 500px;
+    text-align: left;
+    border-radius: 10px 10px 10px 10px;
+    -o-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    overflow: auto;
+}
+
+.ventanaConfirmacionMedianaScroll table tr td.encabezado
+{
+    width: 450px;
+    text-align: left;
+}
+
+
+.ventanaConfirmacionValidacion
+{
+    z-index: 10000;
+    border: 10px outset #FF8F0A;
+    background-color: #FFF;
+    position: absolute;
+    top: 200px;
+    left: 40%;
+    height: 170px;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    -o-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.ventanaConfirmacionValidacion table tr td.encabezado
+{
+    width: 400px;
+    text-align: left;
+}
+
+/* ventanas flotante con informacion de la bd, se define un ancho y el texto es alineado a la izquierda*/
+.ventanaFlotante
+{
+    width: 700px;
+    text-align: left;
+}
+
+
+
+/* El contenedor tiene margen interior izquierda */
+.margenIzquierda
+{
+    padding-left: 20px;
+}
+
+/* Estilo de limpiar los listados en los admin (agrega imagen de puntero) */
+span.limpiar
+{
+    cursor: pointer;
+}
+
+/*Imagen para aceptar los datos ingresados*/
+.imgIngresar
+{
+    width: 30px;
+    height: 30px;
+     
+  
+}
+
+.imgIngresar:hover
+{
+    text-decoration: underline;
+}
+
+
+/* definicion del ancho de una celda por medio de esta clase*/
+td.anchoCelda
+{
+    width: 90px;
+}
+/* Sin borde a nignuna imagen que este contenida dentro de un enlace*/
+a img
+{
+    border: 0;
+}
+/* se genera una margen inferior izquierda*/
+.preguntasInternas
+{
+    padding-left: 10px;
+}
+
+.quitarFieldset
+{
+    border: none;
+}
+
+
+/*BLOQUE DE LAS IMAGENES DE ADMINISTRACIÓN EN TAMAÑO PEQUEÑO*/
+
+/* Link  con icono lateral */
+.linkIconoLateral
+{
+    /*position: relative;*/ /*float: left;*/
+    display: inline-block;
+    height: 17px;
+    left: 5px; /*margin: 2px;*/ /*width: 100%;*/
+}
+.linkIconoLateral p
+{
+    left: 2px;
+    position: relative;
+    top: -10px;
+    font-weight: bold;
+    color: #103B60;
+    font-size: 11px;
+    float: left;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.linkIconoLateral p:hover
+{
+    color: #545454;
+    text-decoration: underline;
+}
+.linkIconoLateral img
+{
+    float: left;
+    cursor: pointer;
+}
+
+/* Link  con icono lateral */
+.linkIconoSuperior
+{
+    /*position: relative;     float: left;*/ /*left: 5px;*/ /*width: 100%;*/
+    display: inline-block;
+    height: 17px;
+}
+.linkIconoSuperior p
+{
+    left: 3px;
+    position: relative;
+    top: -10px;
+    font-weight: bold;
+    color: #103B60;
+    font-size: 11px;
+    float: left;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+.linkIconoSuperior p:hover
+{
+    color: #545454;
+    text-decoration: underline;
+}
+.linkIconoSuperior img
+{
+    float: left;
+    cursor: pointer;
+}
+
+.iframeArchivo
+{
+    border: none;
+    height: 90px;
+}
+
+.iframeArchivoImagen
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+width: 358px;
+    height: 200px;
+    overflow: hidden;
+    background-color: #FCFCFC;
+}
+
+.imgPaginacionHabilitada
+{
+    width: 40px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.imgPaginacionDeshabilitada
+{
+    width: 40px;
+    margin: 5px;
+}
+
+.puntero
+{
+    cursor: pointer;
+}
+
+.fancyNormal
+{
+    width: 830px;
+}
+
+.fancyEliminar
+{
+    width: 400px;
+}
+
+
+.abecedario
+{
+    color: black;
+}
+
+.abecedario:hover
+{
+     
+    cursor: pointer;
+    background-color: #CCC;  
+    -webkit-text-shadow: none;
+    -o-text-shadow: none;
+    -moz-text-shadow: none;
+    -webkit-transition: color, background-color 0.2s linear;
+}
+
+.tbListado{width:100%;}
+.tbListado td.encabezadoFijo0{ width: 5%; }
+.tbListado td.encabezadoFijo1{ width: 15%; }
+.tbListado td.encabezadoFijo2{ width: 65%; }
+.tbListado td.encabezadoFijo3{ width: 15%; }
+.tbListado td.encabezadoFijo4{ width: 40%; }
+
+
+.iframeFotos
+{
+    width: 320px;
+    height: 245px;
+    overflow: hidden;
+    border: none;
+    background-color: #FCFCFC;
+}
+
+.subtitulosDetalle{ text-transform: uppercase; text-align: left; color: #808080; }
+
+/*********************************************************************************/
+/*********************************************************************************/
+.imgPortal {
+    border: 2px solid #103B60;
+    margin: 0;
+    padding: 0;
+    border-radius: 800px;
+    overflow: hidden;
+}
+
+.linkIconoPortal {
+    height: 17px;
+    /*margin-left: 100px;*/
+}
+
+.linkIconoPortal img {
+    /*float: left;*/
+    cursor: pointer;
+    display:inline-block;
+}
+
+.Portal
+{
+    cursor: pointer;
+}
+
+/*Botones Dinamicos para configuracion IVA*/
+.btnInternoNivel1
+{
+    border: 1px solid #BCE4FF;
+    color: #FFF;
+    font-weight: bold;
+    margin: 3px;
+    float: left;
+    padding: 2px;
+    cursor: pointer;
+    background-color: #7196B7;
+    border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -o-border-radius: 5px 5px 0px 0px;
+}
+
+.btnSeleccionadoNivel1
+{
+    border: 1px solid #7196B7;
+    color: #7196B7;
+    font-weight: bold;
+    margin: 3px;
+    float: left;
+    padding: 2px;
+    cursor: pointer;
+    background-color: #FFF;
+    border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -o-border-radius: 5px 5px 0px 0px;
+}
+
+.btnSeleccionadoNivel2
+{
+    border: 1px solid #7196B7;
+    color: #7196B7;
+    font-weight: bold;
+    margin: 3px;
+    float: left;
+    padding: 2px;
+    cursor: pointer;
+    background-color: #FFF;
+    border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -o-border-radius: 5px 5px 0px 0px;
+}
+
+.btnInternoNivel2
+{
+    border: 1px solid #7196B7;
+    color: #FFF;
+    font-weight: bold;
+    margin: 3px;
+    float: left;
+    padding: 2px;
+    cursor: pointer;
+    background-color: #7196B7;
+    border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -o-border-radius: 5px 5px 0px 0px;
+}
+
+.cuerpoListado13
+{
+    background: #E9E5E5;
+    width: 170px;
+}
+
+
+.cuerpoListado3_1
+{
+    background: #DFDFDF;
+    width: 40px;
+}
+
+.cuerpoListado2_2
+{
+    background-color: #E9E5E5;
+    width: 40px;
+}
+
+/*********************************************************************************/
+/*********************************************************************************/
+.imgPortal {
+    border: 2px solid #103B60;
+    margin: 0;
+    padding: 0;
+    border-radius: 800px;
+    overflow: hidden;
+}
+
+.linkIconoPortal {
+    height: 17px;
+    /*margin-left: 100px;*/
+}
+
+.linkIconoPortal img {
+    /*float: left;*/
+    cursor: pointer;
+    display:inline-block;
+}
+
+.Portal
+{
+    cursor: pointer;
+}
+
+.restringir50{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.alineacion{
+    display: inline-block;
+    height: 17px;
+    left: 5px;
+}
+
+.textoRojo
+{
+    color: red;
+}
+
+.textoVerde
+{
+    color: green;
+}
+
+.textoAmarillo
+{
+    color: #DF7401;
+}
+
+.textoAzul
+{
+    color: blue;
+}
+
+.textoRojo p
+{
+    left: 2px;
+    position: relative;
+    top: -10px;
+    font-weight: bold;
+    /*color: #103B60;*/
+    font-size: 11px;
+    float: left;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.textoRojo p:hover
+{
+    /*color: #545454;*/
+    text-decoration: underline;
+}
+
+.textoVerde p
+{
+    left: 2px;
+    position: relative;
+    top: -10px;
+    font-weight: bold;
+    /*color: #103B60;*/
+    font-size: 11px;
+    float: left;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.textoVerde p:hover
+{
+    /*color: #545454;*/
+    text-decoration: underline;
+}
+
+.textoAmarillo p
+{
+    left: 2px;
+    position: relative;
+    top: -10px;
+    font-weight: bold;
+    /*color: #103B60;*/
+    font-size: 11px;
+    float: left;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.textoAmarillo p:hover
+{
+    /*color: #545454;*/
+    text-decoration: underline;
+}
+
+.textoAzul p
+{
+    left: 2px;
+    position: relative;
+    top: -10px;
+    font-weight: bold;
+    /*color: #103B60;*/
+    font-size: 11px;
+    float: left;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.textoAzul p:hover
+{
+    /*color: #545454;*/
+    text-decoration: underline;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #016678;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+    display:block;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+ .content {
+width: 990px;
+height: 500px;
+border:1px solid #000000;
+}
+
+.izquierda{
+width:50px;
+float:left;
+border-right:2px solid;
+}

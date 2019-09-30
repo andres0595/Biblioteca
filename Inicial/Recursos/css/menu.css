@@ -1,0 +1,160 @@
+﻿/*ul general del menú*/
+#menu
+{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 3px #888;
+    -moz-box-shadow: 1px 1px 3px #888;
+    -o-box-shadow: 1px 1px 3px #888;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    font-weight: bold;
+    border-radius: 8px 8px 8px 8px;
+}
+
+/*los li que estan contenidos en el ul general*/
+#menu li:last-child
+{
+    border-bottom: 0px solid #FFF;
+}
+
+#menu li
+{
+    border-bottom: 1px solid #FFF;
+}
+
+/* se le quita el borde al último li del menú*/
+#menu ul li
+{
+    border-bottom: 0,5px solid #FFF;
+}
+
+#menu ul li:last-child
+{
+    border: none;
+}
+
+/* margen para los li de segundo nivel en adelante */
+#menu ul li li
+{
+    padding-left: 5px;
+}
+
+#menu ul li li li
+{
+    padding-left: 5px;
+    width: 110px;
+}
+
+
+#menu ul li li ul
+{
+    width: 110px;
+}
+
+
+/* cada uno de los enlaces que tiene el menú */
+a
+{
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 3px 5px;
+    -webkit-text-shadow: 1px 1px 1px #325179;
+    -o-text-shadow: 1px 1px 1px #325179;
+    -moz-text-shadow: 1px 1px 1px #325179;
+    border-radius: 1px 1px 1px 1px;
+}
+
+/* efecto del menú cuando se selecciona un item  sin enlace */
+#menu a:hover
+{
+    color: #FFF;
+    font-weight: bold;
+    -webkit-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+}
+
+/* efecto del menú con enlace */
+#menu ul a
+{
+    background-color: #7196B7;
+    font-weight: bold;
+}
+
+/* efecto del menú cuando se selecciona un item  con enlace */
+#menu ul a:hover
+{
+    background-color: #FFF;
+    color: #016678;
+    font-weight: bold;
+    -webkit-text-shadow: none;
+    -o-text-shadow: none;
+    -moz-text-shadow: none;
+    -webkit-transition: color, background-color 0.2s linear;
+}
+
+/* estilo para los ul y los li del primer nivel  */
+ul.ulmenu
+{
+    display: block;
+    background-color: #016678;
+    margin: 0;
+    padding: 0;
+    width: 120px;
+    list-style: none;
+    border: 0.5 solid #FFF;
+}
+
+/* Esconder los ul internos del menú */
+#menu ul
+{
+    display: none;
+}
+
+/* Esconder los li internos del menú */
+#menu li
+{
+    display: none;
+}
+
+#menu li ul li
+{
+    display: none;
+}
+
+
+#menu li ul li ul li
+{
+    display: none;
+}
+
+
+
+/* estilo para el menú qeu contiene menús debajo */
+li.menuPadre > a:before
+{
+    background-image: url('../imagenes/Administracion/menu_abajo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "-";
+    color: #FFF;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+
+
+/* estilo para el menú qeu contiene menús debajo */
+li.menuPadre:hover > a:before
+{
+    background-image: url('../imagenes/Administracion/menu_abajo_hover.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "-";
+    color: #103B60;
+    font-weight: bold;
+}

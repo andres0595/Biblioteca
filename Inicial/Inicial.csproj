@@ -1,0 +1,1330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8BE82B36-1216-4F63-996D-B4B6795440D0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inicial</RootNamespace>
+    <AssemblyName>Inicial</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.3.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReportViewer.WebForms.12.0.2402.20\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controlador\css.aspx" />
+    <Content Include="Controlador\ctlAreas.aspx" />
+    <Content Include="Controlador\ctlCambiarClave.aspx" />
+    <Content Include="Controlador\ctlCargaFoto.aspx" />
+    <Content Include="Controlador\ctlCargaFotoUsuario.aspx" />
+    <Content Include="Controlador\ctlCargaLogoEmpresa.aspx" />
+    <Content Include="Controlador\ctlCargarFoto.aspx" />
+    <Content Include="Controlador\ctlCargos.aspx" />
+    <Content Include="Controlador\ctlDirector.aspx" />
+    <Content Include="Controlador\ctlEmpresa.aspx" />
+    <Content Include="Controlador\ctlGeneral.aspx" />
+    <Content Include="Controlador\ctlLogin.aspx" />
+    <Content Include="Controlador\ctlLoginDirecto.aspx" />
+    <Content Include="Controlador\ctlLoginMantenimiento.aspx" />
+    <Content Include="Controlador\ctlPaginador.aspx" />
+    <Content Include="Controlador\ctlPermisosRol.aspx" />
+    <Content Include="Controlador\ctlReportes.aspx" />
+    <Content Include="Controlador\ctlRol.aspx" />
+    <Content Include="Controlador\ctlUsuarios.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Recursos\css\barcode.css" />
+    <Content Include="Recursos\css\calendario\calendario.css" />
+    <Content Include="Recursos\css\calendario\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Recursos\css\calendario\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Recursos\css\calendario\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Recursos\css\calendario\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Recursos\css\calendario\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Recursos\css\calendario\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Recursos\css\calendario\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Recursos\css\calendario\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Recursos\css\calendario\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Recursos\css\calendario\images\ui-icons_222222_256x240.png" />
+    <Content Include="Recursos\css\calendario\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Recursos\css\calendario\images\ui-icons_454545_256x240.png" />
+    <Content Include="Recursos\css\calendario\images\ui-icons_888888_256x240.png" />
+    <Content Include="Recursos\css\calendario\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Recursos\css\calendario\jquery.ui.core.css" />
+    <Content Include="Recursos\css\calendario\jquery.ui.datepicker.css" />
+    <Content Include="Recursos\css\calendario\jquery.ui.theme.css" />
+    <Content Include="Recursos\css\cargaArchivo.css" />
+    <Content Include="Recursos\css\cerrarSesion\demo.css" />
+    <Content Include="Recursos\css\cerrarSesion\styles.css" />
+    <Content Include="Recursos\css\general.css" />
+    <Content Include="Recursos\css\login.css" />
+    <Content Include="Recursos\css\menu.css" />
+    <Content Include="Recursos\css\menu\script.js" />
+    <Content Include="Recursos\css\menu\styles.css" />
+    <Content Include="Recursos\css\paginaMaestra.css" />
+    <Content Include="Recursos\css\pestanas\demos.css" />
+    <Content Include="Recursos\css\pestanas\jquery.ui.tabs.css" />
+    <Content Include="Recursos\imagenes\administracion\aceptar.png" />
+    <Content Include="Recursos\imagenes\administracion\aceptar1.png" />
+    <Content Include="Recursos\imagenes\administracion\aceptar2.png" />
+    <Content Include="Recursos\imagenes\administracion\aceptar3.png" />
+    <Content Include="Recursos\imagenes\administracion\actualizar_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\agregar24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\agregar_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\atras.png" />
+    <Content Include="Recursos\imagenes\administracion\auditoria.png" />
+    <Content Include="Recursos\imagenes\administracion\Boton_Bukeala_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\Boton_Bukeala_348x348.png" />
+    <Content Include="Recursos\imagenes\administracion\Boton_Bukeala_48x48.png" />
+    <Content Include="Recursos\imagenes\administracion\buscar.png" />
+    <Content Include="Recursos\imagenes\administracion\buscar24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\buscar_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\calendario_nuevo.png" />
+    <Content Include="Recursos\imagenes\administracion\cambioCLave.png" />
+    <Content Include="Recursos\imagenes\administracion\cancelar.png" />
+    <Content Include="Recursos\imagenes\administracion\cancelartramite.png" />
+    <Content Include="Recursos\imagenes\administracion\cargar.png" />
+    <Content Include="Recursos\imagenes\administracion\Cargue_Documentos.png" />
+    <Content Include="Recursos\imagenes\administracion\check.png" />
+    <Content Include="Recursos\imagenes\administracion\cmd.png" />
+    <Content Include="Recursos\imagenes\administracion\Correo_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\Correo_48x48.png" />
+    <Content Include="Recursos\imagenes\administracion\crearActividad.png" />
+    <Content Include="Recursos\imagenes\administracion\descargar.png" />
+    <Content Include="Recursos\imagenes\administracion\desconectar_22x22.png" />
+    <Content Include="Recursos\imagenes\administracion\desplegar.png" />
+    <Content Include="Recursos\imagenes\administracion\editar.png" />
+    <Content Include="Recursos\imagenes\administracion\editar_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\ejecutar.png" />
+    <Content Include="Recursos\imagenes\administracion\eliminar.png" />
+    <Content Include="Recursos\imagenes\administracion\eliminar24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\eliminar_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\enviar.png" />
+    <Content Include="Recursos\imagenes\administracion\filtroabajo.png" />
+    <Content Include="Recursos\imagenes\administracion\filtroarriba.png" />
+    <Content Include="Recursos\imagenes\administracion\finalizar.png" />
+    <Content Include="Recursos\imagenes\administracion\flecha_abajo.png" />
+    <Content Include="Recursos\imagenes\administracion\folder.png" />
+    <Content Include="Recursos\imagenes\administracion\folder1.png" />
+    <Content Include="Recursos\imagenes\administracion\gestionar.png" />
+    <Content Include="Recursos\imagenes\administracion\guardar.png" />
+    <Content Include="Recursos\imagenes\administracion\guardarListar.png" />
+    <Content Include="Recursos\imagenes\administracion\guardarListar_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\guardarysiguiente.png" />
+    <Content Include="Recursos\imagenes\administracion\horario_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\imprimir.png" />
+    <Content Include="Recursos\imagenes\administracion\info.png" />
+    <Content Include="Recursos\imagenes\administracion\informar.png" />
+    <Content Include="Recursos\imagenes\administracion\ingresar.png" />
+    <Content Include="Recursos\imagenes\administracion\inicio.png" />
+    <Content Include="Recursos\imagenes\administracion\limpiar.png" />
+    <Content Include="Recursos\imagenes\administracion\limpiarcard.png" />
+    <Content Include="Recursos\imagenes\administracion\listar.png" />
+    <Content Include="Recursos\imagenes\administracion\listar24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\Llamada_24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\Llamada_48x48.png" />
+    <Content Include="Recursos\imagenes\administracion\llamar.png" />
+    <Content Include="Recursos\imagenes\administracion\llamar_rojo.png" />
+    <Content Include="Recursos\imagenes\administracion\Logo_Cable_Aereo.jpg" />
+    <Content Include="Recursos\imagenes\administracion\mailAttach.png" />
+    <Content Include="Recursos\imagenes\administracion\mensaje.png" />
+    <Content Include="Recursos\imagenes\administracion\menu_abajo.png" />
+    <Content Include="Recursos\imagenes\administracion\menu_abajo_hover.png" />
+    <Content Include="Recursos\imagenes\administracion\more.png" />
+    <Content Include="Recursos\imagenes\administracion\mostrar.png" />
+    <Content Include="Recursos\imagenes\administracion\nomore.png" />
+    <Content Include="Recursos\imagenes\administracion\notcheck.png" />
+    <Content Include="Recursos\imagenes\administracion\no_disponible.jpg" />
+    <Content Include="Recursos\imagenes\administracion\nuevagestion_48x48.png" />
+    <Content Include="Recursos\imagenes\administracion\obligatorio.png" />
+    <Content Include="Recursos\imagenes\administracion\observacion.png" />
+    <Content Include="Recursos\imagenes\administracion\ocultar.png" />
+    <Content Include="Recursos\imagenes\administracion\pacientesnuevos.png" />
+    <Content Include="Recursos\imagenes\administracion\pdf.png" />
+    <Content Include="Recursos\imagenes\administracion\Programacion-de-tramites-%28343x348%29.png" />
+    <Content Include="Recursos\imagenes\administracion\reasignar.png" />
+    <Content Include="Recursos\imagenes\administracion\Recepcióndellamadas.png" />
+    <Content Include="Recursos\imagenes\administracion\registro.png" />
+    <Content Include="Recursos\imagenes\administracion\salvar.png" />
+    <Content Include="Recursos\imagenes\administracion\subir.png" />
+    <Content Include="Recursos\imagenes\administracion\todos-BK.png" />
+    <Content Include="Recursos\imagenes\administracion\todos.png" />
+    <Content Include="Recursos\imagenes\administracion\tramitar.png" />
+    <Content Include="Recursos\imagenes\administracion\usuarioNuevo.png" />
+    <Content Include="Recursos\imagenes\administracion\utilities-terminal.png" />
+    <Content Include="Recursos\imagenes\administracion\validar.png" />
+    <Content Include="Recursos\imagenes\administracion\validaryaprobar.png" />
+    <Content Include="Recursos\imagenes\administracion\variables24x24.png" />
+    <Content Include="Recursos\imagenes\administracion\ver.png" />
+    <Content Include="Recursos\imagenes\administracion\visualizar.png" />
+    <Content Include="Recursos\imagenes\codigos\cod1.jpg" />
+    <Content Include="Recursos\imagenes\codigos\cod2.jpg" />
+    <Content Include="Recursos\imagenes\codigos\cod3.jpg" />
+    <Content Include="Recursos\imagenes\generales\apps-folder.png" />
+    <Content Include="Recursos\imagenes\generales\cambioPassword.png" />
+    <Content Include="Recursos\imagenes\generales\Chrome.png" />
+    <Content Include="Recursos\imagenes\generales\computer.png" />
+    <Content Include="Recursos\imagenes\generales\explorer.png" />
+    <Content Include="Recursos\imagenes\generales\firefox.png" />
+    <Content Include="Recursos\imagenes\generales\hdd.png" />
+    <Content Include="Recursos\imagenes\generales\inicioSIINC.png" />
+    <Content Include="Recursos\imagenes\generales\inicio_lcweb.png" />
+    <Content Include="Recursos\imagenes\generales\l1.png" />
+    <Content Include="Recursos\imagenes\generales\l2.png" />
+    <Content Include="Recursos\imagenes\generales\l3.png" />
+    <Content Include="Recursos\imagenes\generales\l4.png" />
+    <Content Include="Recursos\imagenes\generales\l5.png" />
+    <Content Include="Recursos\imagenes\generales\LoadingProgressBar.gif" />
+    <Content Include="Recursos\imagenes\generales\Logo SIINCO - FB %282%29.jpg" />
+    <Content Include="Recursos\imagenes\generales\Logo SIINCO - FB %283%29.jpg" />
+    <Content Include="Recursos\imagenes\generales\Logo SIINCO - Trans. %282%29.png" />
+    <Content Include="Recursos\imagenes\generales\Logo SIINCO - Trans. %283%29.png" />
+    <Content Include="Recursos\imagenes\generales\logoWin.png" />
+    <Content Include="Recursos\imagenes\generales\no_disponible.jpg" />
+    <Content Include="Recursos\imagenes\generales\opera.png" />
+    <Content Include="Recursos\imagenes\generales\pagina-en-construccion.jpg" />
+    <Content Include="Recursos\imagenes\generales\path.png" />
+    <Content Include="Recursos\imagenes\generales\progress_bar.gif" />
+    <Content Include="Recursos\imagenes\generales\safari.png" />
+    <Content Include="Recursos\imagenes\generales\sedeMark.png" />
+    <Content Include="Recursos\imagenes\generales\shadow.png" />
+    <Content Include="Recursos\imagenes\generales\SIINCOlogin.jpg" />
+    <Content Include="Recursos\imagenes\generales\sitio_en_construccion.jpg" />
+    <Content Include="Recursos\imagenes\generales\system-folder.png" />
+    <Content Include="Recursos\imagenes\generales\system-time.png" />
+    <Content Include="Recursos\imagenes\generales\temp-folder.png" />
+    <Content Include="Recursos\imagenes\generales\user-folder.png" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\GENXGRUETA1.png" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\GENXGRUETA2.png" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\GENXGRUETA3.png" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\GENXGRUETA4.png" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\HistoricoAdherencia1.PNG" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\HistoricoAdherencia2.PNG" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\HistoricoAdherencia3.PNG" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\HistoricoAdherencia4.PNG" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\HistoricoAdherencia5.PNG" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\HistoricoCanalReporte.PNG" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\HistoricoCumplimientoGestion.PNG" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\HistoricoEficaciaLlamada.PNG" />
+    <Content Include="Recursos\imagenes\HistorialIndicadores\HistoricoSeguimientoPeriodico.PNG" />
+    <Content Include="Recursos\imagenes\indicadores\1.PNG" />
+    <Content Include="Recursos\imagenes\indicadores\2.PNG" />
+    <Content Include="Recursos\imagenes\indicadores\3.PNG" />
+    <Content Include="Recursos\imagenes\indicadores\4.PNG" />
+    <Content Include="Recursos\imagenes\indicadores\5.PNG" />
+    <Content Include="Recursos\imagenes\listado\anterior.png" />
+    <Content Include="Recursos\imagenes\listado\anterior_gris.png" />
+    <Content Include="Recursos\imagenes\listado\inicio.png" />
+    <Content Include="Recursos\imagenes\listado\inicio_gris.png" />
+    <Content Include="Recursos\imagenes\listado\siguiente.png" />
+    <Content Include="Recursos\imagenes\listado\siguiente_gris.png" />
+    <Content Include="Recursos\imagenes\listado\ultimo.png" />
+    <Content Include="Recursos\imagenes\listado\ultimo_gris.png" />
+    <Content Include="Recursos\imagenes\login\boton_ingresar.png" />
+    <Content Include="Recursos\imagenes\login\fondo.png" />
+    <Content Include="Recursos\imagenes\login\fondo1.png" />
+    <Content Include="Recursos\imagenes\login\fondo2.png" />
+    <Content Include="Recursos\imagenes\login\fondo3.png" />
+    <Content Include="Recursos\imagenes\login\fondo4.png" />
+    <Content Include="Recursos\imagenes\login\Interrogacion.png" />
+    <Content Include="Recursos\imagenes\login\ok.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\Body.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\Body_Center.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\Body_Left.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\Body_Login.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\Body_Right.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\derecha.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\fondo5.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\footer.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\footer2.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\Head.jpg" />
+    <Content Include="Recursos\imagenes\paginaMaestra\Head.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\head1SIINC.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\Head2.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\Head7.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\headAzul.jpg" />
+    <Content Include="Recursos\imagenes\paginaMaestra\headSIINC.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\izquierda.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\lcweb.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\logo_pequeño.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\pie.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\producto.png" />
+    <Content Include="Recursos\imagenes\paginaMaestra\WD3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\10.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\11.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\12.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\15.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\2.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\22.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\23.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\3.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\30.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\33.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\34.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\4.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\40.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\41.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\42.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\43.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\5.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\51.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\52.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\53.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\6.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\7.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\8.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\9.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BARRA_1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BARRA_2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BARRA_3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BARRA_4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BARRA_5.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BOG_1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BOG_2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BOG_3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BOG_4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BOG_5.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BUCA_1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BUCA_2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BUCA_3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_BUCA_4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_CALI_1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_CALI_2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_CALI_3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_CALI_4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_CALI_5.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_CENORI_1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_CENORI_2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_CENORI_3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_CENORI_4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_MED_1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_MED_2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_MED_3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_MED_4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_MED_5.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_NACIONAL1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_NACIONAL2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_NACIONAL3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_NAC_1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_NAC_2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_NAC_3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_NAC_4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_NAC_5.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_PORDEFINIR_1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_PORDEFINIR_2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_PORDEFINIR_3.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\ADHE_PORDEFINIR_4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\Adherencia\AR_N_1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\1_barranquilla.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\1_bogota.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\1_bucaramanga.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\1_Cali.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\1_CentroOriente.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\1_Medellin.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\1_Nacional.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\1_PorDefinir.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\2_barranquilla.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\2_bogota.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\2_bucaramanga.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\2_Cali.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\2_CentroOriente.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\2_Medellin.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\2_Nacional.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\2_PorDefinir.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\3_barranquilla.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\3_bogota.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\3_bucaramanga.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\3_Cali.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\3_CentroOriente.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\3_Medellin.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\3_Nacional.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\3_PorDefinir.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\4_barranquilla.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\4_bogota.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\4_bucaramanga.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\4_Cali.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\4_CentroOriente.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\4_Medellin.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\4_Nacional.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\4_PorDefinir.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\CANAL_BARRAN4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\canalReporte\CANAL_PORDEFINIR4.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\1_Barranquilla.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\1_Bogota.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\1_Bucaramanga.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\1_Cali.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\1_CentroOriente.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\1_Medellin.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\1_Nacional.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\1_PorDefinir.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\2_Medellin.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\2_Nacional.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEBA1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEBA2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEBO1.1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEBO1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEBO2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEBU1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEBU2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGECA1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGECA2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGECO1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGECO2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEME1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEME2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGENA1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGENA2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEPD1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\CumplimientoGestion\CUGEPD2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBA1.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBA2.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBA3.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBA4.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBO1.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBO2.1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBO2.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBO3.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBO4.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBO5.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBU1.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBU2.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBU3.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFBU4.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFCA1.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFCA2.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFCA3.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFCA4.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFCO1.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFCO2.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFCO3.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFCO4.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFICA_CALI1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFICA_CALI2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFICA_CO1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFICA_CO2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFICA_MED1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFICA_MED2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFICA_NACIONAL1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFICA_POR1.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFICA_POR2.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFME1.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFME2.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFME3.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFME4.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFN1.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFN2.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFN3.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFN4.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFN5.png" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFPD1.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFPD2.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFPD3.PNG" />
+    <Content Include="Recursos\imagenes\reporteIndicadores\EficaciaLlamada\EFPD4.PNG" />
+    <Content Include="Recursos\imagenes\reportesimg\0MZ.PNG" />
+    <Content Include="Recursos\imagenes\reportesimg\1MZ.png" />
+    <Content Include="Recursos\imagenes\reportesimg\2MZ.PNG" />
+    <Content Include="Recursos\imagenes\reportesimg\3MZ.PNG" />
+    <Content Include="Recursos\imagenes\reportesimg\D1.PNG" />
+    <Content Include="Recursos\imagenes\reportesimg\MZ10.PNG" />
+    <Content Include="Recursos\imagenes\reportesimg\MZ11.png" />
+    <Content Include="Recursos\imagenes\reportesimg\MZ111.png" />
+    <Content Include="Recursos\imagenes\reportesimg\MZ6.png" />
+    <Content Include="Recursos\imagenes\reportesimg\MZ7.png" />
+    <Content Include="Recursos\imagenes\reportesimg\MZ8.png" />
+    <Content Include="Recursos\imagenes\reportesimg\MZ9.png" />
+    <Content Include="Recursos\imagenes\reportesimg\MZ9MZ.PNG" />
+    <Content Include="Recursos\imagenes\reportesimg\MZ9MZMZ.PNG" />
+    <Content Include="Recursos\imagenes\reportesimg\S1.PNG" />
+    <Content Include="Recursos\imagenes\tiposActividades\bombillo.png" />
+    <Content Include="Recursos\imagenes\tiposActividades\calendario.png" />
+    <Content Include="Recursos\imagenes\tiposActividades\esfero.png" />
+    <Content Include="Recursos\imagenes\tiposActividades\estrella.png" />
+    <Content Include="Recursos\imagenes\tiposActividades\libreta.png" />
+    <Content Include="Recursos\imagenes\tiposActividades\mail.png" />
+    <Content Include="Recursos\imagenes\tiposActividades\pesos.png" />
+    <Content Include="Recursos\imagenes\tiposActividades\telefono.png" />
+    <Content Include="Recursos\js\accounting.js" />
+    <Content Include="Recursos\js\ajax\areas.js" />
+    <Content Include="Recursos\js\ajax\areaTecnologia.js" />
+    <Content Include="Recursos\js\ajax\cambiarClave.js" />
+    <Content Include="Recursos\js\ajax\cargos.js" />
+    <Content Include="Recursos\js\ajax\cerrarSesion.js" />
+    <Content Include="Recursos\js\ajax\elegirEmpresas.js" />
+    <Content Include="Recursos\js\ajax\empresas.js" />
+    <Content Include="Recursos\js\ajax\grupo.js" />
+    <Content Include="Recursos\js\ajax\grupoSubGrupo.js" />
+    <Content Include="Recursos\js\ajax\inicioSP2017.js" />
+    <Content Include="Recursos\js\ajax\login.js" />
+    <Content Include="Recursos\js\ajax\loginPagina.js" />
+    <Content Include="Recursos\js\ajax\login_directo.js" />
+    <Content Include="Recursos\js\ajax\login_mantenimiento.js" />
+    <Content Include="Recursos\js\ajax\mantenimiento.js" />
+    <Content Include="Recursos\js\ajax\paginaMaestra.js" />
+    <Content Include="Recursos\js\ajax\permisos_rol.js" />
+    <Content Include="Recursos\js\ajax\presentacion.js" />
+    <Content Include="Recursos\js\ajax\registra_empresas.js" />
+    <Content Include="Recursos\js\ajax\rol.js" />
+    <Content Include="Recursos\js\ajax\usuario.js" />
+    <Content Include="Recursos\js\ajax\usuarios_conectados.js" />
+    <Content Include="Recursos\js\ajax\verifica_sesion.js" />
+    <Content Include="Recursos\js\autocompletar\content\styles.css" />
+    <Content Include="Recursos\js\autocompletar\scripts\jquery-1.8.2.min.js" />
+    <Content Include="Recursos\js\autocompletar\scripts\jquery.mockjax.js" />
+    <Content Include="Recursos\js\autocompletar\src\jquery.autocomplete.js" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Recursos\js\autocomplete\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.accordion.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.all.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.autocomplete.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.base.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.button.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.core.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.datepicker.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.dialog.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.progressbar.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.resizable.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.selectable.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.slider.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.tabs.css" />
+    <Content Include="Recursos\js\autocomplete\base\jquery.ui.theme.css" />
+    <Content Include="Recursos\js\autocomplete\jquery.ui.autocomplete.js" />
+    <Content Include="Recursos\js\autocomplete\jquery.ui.core.js" />
+    <Content Include="Recursos\js\autocomplete\jquery.ui.position.js" />
+    <Content Include="Recursos\js\autocomplete\jquery.ui.widget.js" />
+    <Content Include="Recursos\js\calendario\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Recursos\js\calendario\jquery-ui-1.8.7.custom.js" />
+    <Content Include="Recursos\js\calendario\jquery.ui.core.js" />
+    <Content Include="Recursos\js\calendario\jquery.ui.datepicker.autocomplete.js" />
+    <Content Include="Recursos\js\calendario\jquery.ui.datepicker.js" />
+    <Content Include="Recursos\js\calendario\jquery.ui.widget.js" />
+    <Content Include="Recursos\js\cargaArchivoMultiple\jquery-1.3.2-vsdoc2.js" />
+    <Content Include="Recursos\js\cargaArchivoMultiple\jquery.MultiFile.js" />
+    <Content Include="Recursos\js\cerrarSesion.js" />
+    <Content Include="Recursos\js\docsupport\chosen-sprite%402x.png" />
+    <Content Include="Recursos\js\docsupport\chosen-sprite.png" />
+    <Content Include="Recursos\js\docsupport\chosen.css" />
+    <Content Include="Recursos\js\docsupport\chosen.jquery.js" />
+    <Content Include="Recursos\js\docsupport\chosen.jquery.min.js" />
+    <Content Include="Recursos\js\docsupport\chosen.min.css" />
+    <Content Include="Recursos\js\docsupport\chosen.png" />
+    <Content Include="Recursos\js\docsupport\chosen.proto.js" />
+    <Content Include="Recursos\js\docsupport\chosen.proto.min.js" />
+    <Content Include="Recursos\js\docsupport\oss-credit.png" />
+    <Content Include="Recursos\js\docsupport\prism.css" />
+    <Content Include="Recursos\js\docsupport\prism.js" />
+    <Content Include="Recursos\js\docsupport\style.css" />
+    <Content Include="Recursos\js\fancybox\blank.gif" />
+    <Content Include="Recursos\js\fancybox\fancybox-x.png" />
+    <Content Include="Recursos\js\fancybox\fancybox-y.png" />
+    <Content Include="Recursos\js\fancybox\fancybox.png" />
+    <Content Include="Recursos\js\fancybox\fancy_close.png" />
+    <Content Include="Recursos\js\fancybox\fancy_loading.png" />
+    <Content Include="Recursos\js\fancybox\fancy_nav_left.png" />
+    <Content Include="Recursos\js\fancybox\fancy_nav_right.png" />
+    <Content Include="Recursos\js\fancybox\fancy_shadow_e.png" />
+    <Content Include="Recursos\js\fancybox\fancy_shadow_n.png" />
+    <Content Include="Recursos\js\fancybox\fancy_shadow_ne.png" />
+    <Content Include="Recursos\js\fancybox\fancy_shadow_nw.png" />
+    <Content Include="Recursos\js\fancybox\fancy_shadow_s.png" />
+    <Content Include="Recursos\js\fancybox\fancy_shadow_se.png" />
+    <Content Include="Recursos\js\fancybox\fancy_shadow_sw.png" />
+    <Content Include="Recursos\js\fancybox\fancy_shadow_w.png" />
+    <Content Include="Recursos\js\fancybox\fancy_title_left.png" />
+    <Content Include="Recursos\js\fancybox\fancy_title_main.png" />
+    <Content Include="Recursos\js\fancybox\fancy_title_over.png" />
+    <Content Include="Recursos\js\fancybox\fancy_title_right.png" />
+    <Content Include="Recursos\js\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="Recursos\js\fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="Recursos\js\fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="Recursos\js\fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="Recursos\js\fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="Recursos\js\graficas\jpgraph.js" />
+    <Content Include="Recursos\js\jquery-1.4.1.js" />
+    <Content Include="Recursos\js\jquery-1.4.4.js" />
+    <Content Include="Recursos\js\jquery-1.9.1.js" />
+    <Content Include="Recursos\js\jquery.js" />
+    <Content Include="Recursos\js\jquery.min.js" />
+    <Content Include="Recursos\js\jQuery_adicional.js" />
+    <Content Include="Recursos\js\jspdf.plugin.autotable.min.js" />
+    <Content Include="Recursos\js\md5.js" />
+    <Content Include="Recursos\js\menu.js" />
+    <Content Include="Recursos\js\navegadores.js" />
+    <Content Include="Recursos\js\pestanas\jquery.ui.tabs.js" />
+    <Content Include="Recursos\js\send_request.js" />
+    <Content Include="Recursos\js\tinymce\examples\css\content.css" />
+    <Content Include="Recursos\js\tinymce\examples\css\word.css" />
+    <Content Include="Recursos\js\tinymce\examples\lists\image_list.js" />
+    <Content Include="Recursos\js\tinymce\examples\lists\link_list.js" />
+    <Content Include="Recursos\js\tinymce\examples\lists\media_list.js" />
+    <Content Include="Recursos\js\tinymce\examples\lists\template_list.js" />
+    <Content Include="Recursos\js\tinymce\examples\media\logo.jpg" />
+    <Content Include="Recursos\js\tinymce\examples\media\logo_over.jpg" />
+    <Content Include="Recursos\js\tinymce\examples\media\sample.avi" />
+    <Content Include="Recursos\js\tinymce\examples\media\sample.flv" />
+    <Content Include="Recursos\js\tinymce\examples\media\sample.mov" />
+    <Content Include="Recursos\js\tinymce\examples\media\sample.swf" />
+    <Content Include="Recursos\js\tinymce\examples\templates\layout1.htm" />
+    <Content Include="Recursos\js\tinymce\examples\templates\snippet1.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\langs\en.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advlist\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\autolink\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\autolink\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\autosave\langs\en.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\example_dependency\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\example_dependency\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\lists\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\lists\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\media\media.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\media\moxieplayer.swf" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\preview\example.html" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\style\props.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\row.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\table\table.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\template\template.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\flash.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\iframe.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\pagebreak.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\quicktime.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\realmedia.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\shockwave.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\trans.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\video.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\img\windowsmedia.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\shortcuts.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\highcontrast\content.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\highcontrast\dialog.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\highcontrast\ui.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\tiny_mce.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\tiny_mce_gzip.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\tiny_mce_src.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\utils\editable_selects.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\utils\form_utils.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\utils\mctabs.js" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\utils\validate.js" />
+    <Content Include="Recursos\js\ui-timepickr\jquery-ui-timepicker-addon.js" />
+    <Content Include="Recursos\js\validarCampos.js" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Vista\administracion\area.aspx" />
+    <Content Include="Vista\administracion\auditorias.aspx" />
+    <Content Include="Vista\administracion\aud_rol.aspx" />
+    <Content Include="Vista\administracion\aud_usuario.aspx" />
+    <Content Include="Vista\administracion\cargo.aspx" />
+    <Content Include="Vista\administracion\Departamentos.aspx" />
+    <Content Include="Vista\administracion\DetalleEmpresa.aspx" />
+    <Content Include="Vista\administracion\empresa.aspx" />
+    <Content Include="Vista\administracion\grupo.aspx" />
+    <Content Include="Vista\administracion\permisos_rol.aspx" />
+    <Content Include="Vista\administracion\registrarEmpresa.aspx" />
+    <Content Include="Vista\administracion\rol.aspx" />
+    <Content Include="Vista\administracion\usuario.aspx" />
+    <Content Include="Vista\administracion\usuarios_conectados.aspx" />
+    <Content Include="Vista\director\elegirEmpresa.aspx" />
+    <Content Include="Vista\director\registrarEmpresa.aspx" />
+    <Content Include="Vista\general\cambio_clave.aspx" />
+    <Content Include="Vista\general\elegirEmpresa.aspx" />
+    <Content Include="Vista\general\inicio.aspx" />
+    <Content Include="Vista\general\login.aspx" />
+    <Content Include="Vista\general\login_directo.aspx" />
+    <Content Include="Vista\general\login_mantenimiento.aspx" />
+    <Content Include="Vista\general\mantenimiento.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\css.aspx.cs">
+      <DependentUpon>css.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\css.aspx.designer.cs">
+      <DependentUpon>css.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlAreas.aspx.cs">
+      <DependentUpon>ctlAreas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlAreas.aspx.designer.cs">
+      <DependentUpon>ctlAreas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlCambiarClave.aspx.cs">
+      <DependentUpon>ctlCambiarClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlCambiarClave.aspx.designer.cs">
+      <DependentUpon>ctlCambiarClave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlCargaFoto.aspx.cs">
+      <DependentUpon>ctlCargaFoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlCargaFoto.aspx.designer.cs">
+      <DependentUpon>ctlCargaFoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlCargaFotoUsuario.aspx.cs">
+      <DependentUpon>ctlCargaFotoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlCargaFotoUsuario.aspx.designer.cs">
+      <DependentUpon>ctlCargaFotoUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlCargaLogoEmpresa.aspx.cs">
+      <DependentUpon>ctlCargaLogoEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlCargaLogoEmpresa.aspx.designer.cs">
+      <DependentUpon>ctlCargaLogoEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlCargarFoto.aspx.cs">
+      <DependentUpon>ctlCargarFoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlCargarFoto.aspx.designer.cs">
+      <DependentUpon>ctlCargarFoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlCargos.aspx.cs">
+      <DependentUpon>ctlCargos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlCargos.aspx.designer.cs">
+      <DependentUpon>ctlCargos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlDirector.aspx.cs">
+      <DependentUpon>ctlDirector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlDirector.aspx.designer.cs">
+      <DependentUpon>ctlDirector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlEmpresa.aspx.cs">
+      <DependentUpon>ctlEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlEmpresa.aspx.designer.cs">
+      <DependentUpon>ctlEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlGeneral.aspx.cs">
+      <DependentUpon>ctlGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlGeneral.aspx.designer.cs">
+      <DependentUpon>ctlGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlInicio.cs" />
+    <Compile Include="Controlador\ctlLogin.aspx.cs">
+      <DependentUpon>ctlLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlLogin.aspx.designer.cs">
+      <DependentUpon>ctlLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlLoginDirecto.aspx.cs">
+      <DependentUpon>ctlLoginDirecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlLoginDirecto.aspx.designer.cs">
+      <DependentUpon>ctlLoginDirecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlLoginMantenimiento.aspx.cs">
+      <DependentUpon>ctlLoginMantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlLoginMantenimiento.aspx.designer.cs">
+      <DependentUpon>ctlLoginMantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlPaginador.aspx.cs">
+      <DependentUpon>ctlPaginador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlPaginador.aspx.designer.cs">
+      <DependentUpon>ctlPaginador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlPermisosRol.aspx.cs">
+      <DependentUpon>ctlPermisosRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlPermisosRol.aspx.designer.cs">
+      <DependentUpon>ctlPermisosRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlReportes.aspx.cs">
+      <DependentUpon>ctlReportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlReportes.aspx.designer.cs">
+      <DependentUpon>ctlReportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlRol.aspx.cs">
+      <DependentUpon>ctlRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlRol.aspx.designer.cs">
+      <DependentUpon>ctlRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\ctlUsuarios.aspx.cs">
+      <DependentUpon>ctlUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlador\ctlUsuarios.aspx.designer.cs">
+      <DependentUpon>ctlUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlador\Mantenimiento.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConexionBD_SqlServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Vista\administracion\area.aspx.cs">
+      <DependentUpon>area.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\area.aspx.designer.cs">
+      <DependentUpon>area.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\auditorias.aspx.cs">
+      <DependentUpon>auditorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\auditorias.aspx.designer.cs">
+      <DependentUpon>auditorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\aud_rol.aspx.cs">
+      <DependentUpon>aud_rol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\aud_rol.aspx.designer.cs">
+      <DependentUpon>aud_rol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\aud_usuario.aspx.cs">
+      <DependentUpon>aud_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\aud_usuario.aspx.designer.cs">
+      <DependentUpon>aud_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\cargo.aspx.cs">
+      <DependentUpon>cargo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\cargo.aspx.designer.cs">
+      <DependentUpon>cargo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\Departamentos.aspx.cs">
+      <DependentUpon>Departamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\Departamentos.aspx.designer.cs">
+      <DependentUpon>Departamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\DetalleEmpresa.aspx.cs">
+      <DependentUpon>DetalleEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\DetalleEmpresa.aspx.designer.cs">
+      <DependentUpon>DetalleEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\empresa.aspx.cs">
+      <DependentUpon>empresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\empresa.aspx.designer.cs">
+      <DependentUpon>empresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\grupo.aspx.cs">
+      <DependentUpon>grupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\grupo.aspx.designer.cs">
+      <DependentUpon>grupo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\permisos_rol.aspx.cs">
+      <DependentUpon>permisos_rol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\permisos_rol.aspx.designer.cs">
+      <DependentUpon>permisos_rol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\registrarEmpresa.aspx.cs">
+      <DependentUpon>registrarEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\registrarEmpresa.aspx.designer.cs">
+      <DependentUpon>registrarEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\rol.aspx.cs">
+      <DependentUpon>rol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\rol.aspx.designer.cs">
+      <DependentUpon>rol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\usuario.aspx.cs">
+      <DependentUpon>usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\usuario.aspx.designer.cs">
+      <DependentUpon>usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\administracion\usuarios_conectados.aspx.cs">
+      <DependentUpon>usuarios_conectados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\administracion\usuarios_conectados.aspx.designer.cs">
+      <DependentUpon>usuarios_conectados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\director\elegirEmpresa.aspx.cs">
+      <DependentUpon>elegirEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\director\elegirEmpresa.aspx.designer.cs">
+      <DependentUpon>elegirEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\director\registrarEmpresa.aspx.cs">
+      <DependentUpon>registrarEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\director\registrarEmpresa.aspx.designer.cs">
+      <DependentUpon>registrarEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\general\cambio_clave.aspx.cs">
+      <DependentUpon>cambio_clave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\general\cambio_clave.aspx.designer.cs">
+      <DependentUpon>cambio_clave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\general\elegirEmpresa.aspx.cs">
+      <DependentUpon>elegirEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\general\elegirEmpresa.aspx.designer.cs">
+      <DependentUpon>elegirEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\general\inicio.aspx.cs">
+      <DependentUpon>inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\general\inicio.aspx.designer.cs">
+      <DependentUpon>inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\general\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\general\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\general\login_directo.aspx.cs">
+      <DependentUpon>login_directo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\general\login_directo.aspx.designer.cs">
+      <DependentUpon>login_directo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\general\login_mantenimiento.aspx.cs">
+      <DependentUpon>login_mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\general\login_mantenimiento.aspx.designer.cs">
+      <DependentUpon>login_mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\general\mantenimiento.aspx.cs">
+      <DependentUpon>mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\general\mantenimiento.aspx.designer.cs">
+      <DependentUpon>mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\master\pagina_director.Master.cs">
+      <DependentUpon>pagina_director.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\master\pagina_director.Master.designer.cs">
+      <DependentUpon>pagina_director.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\master\pagina_maestra.Master.cs">
+      <DependentUpon>pagina_maestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\master\pagina_maestra.Master.designer.cs">
+      <DependentUpon>pagina_maestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\master\pagina_mantenimiento.Master.cs">
+      <DependentUpon>pagina_mantenimiento.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\master\pagina_mantenimiento.Master.designer.cs">
+      <DependentUpon>pagina_mantenimiento.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controlador\Mantenimiento\del.bat" />
+    <None Include="Controlador\Mantenimiento\hdd.bat" />
+    <None Include="Controlador\Mantenimiento\vs.bat" />
+    <Content Include="packages.config" />
+    <None Include="Recursos\imagenes\administracion\todos.psd" />
+    <None Include="Recursos\js\docsupport\bower.json" />
+    <None Include="Recursos\js\tinymce\examples\media\sample.dcr" />
+    <None Include="Recursos\js\tinymce\examples\media\sample.ram" />
+    <None Include="Recursos\js\tinymce\examples\media\sample.rm" />
+    <Content Include="Recursos\js\tinymce\jscripts\tiny_mce\tiny_mce_gzip.ashx" />
+    <Content Include="Vista\master\pagina_director.Master" />
+    <Content Include="Vista\master\pagina_maestra.Master" />
+    <Content Include="Vista\master\pagina_mantenimiento.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Recursos\imagenes\reporteIndicadores\Oportunidad\" />
+    <Folder Include="Recursos\imagenes\reporteIndicadores\SeguimientoPeriodico\" />
+    <Folder Include="Vista\parametrizacion\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11027</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1795/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

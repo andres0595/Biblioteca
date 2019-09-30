@@ -1,0 +1,32 @@
+﻿/*Imagen para aceptar los datos ingresados*/
+.imgIngresar{
+    width:30px;
+    height: 30px;
+    cursor:pointer;
+    color: black;
+}
+
+/*tabla que contiene los elementos del login*/
+.tbLogin
+{
+    border: 2px double #7196B7;
+    background-color: #1269A2;
+    color: #FFF;
+    font-weight: bold;
+    -o-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px;
+    z-index: 1;
+    margin: auto;
+}
+
+/* Div que ocntiene a la tabla del login */
+.divLogin
+{
+    background: #FFF url('../../Recursos/imagenes/login/gescom.png');
+    background-position:bottom;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-bottom: 10%;    
+}

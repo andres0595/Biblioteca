@@ -1,0 +1,29 @@
+﻿@import "general.css";
+
+/*tamaño de la imagen del infograma*/
+.imgInfograma
+{
+    width: 200px;
+    height: 210px;
+    overflow: hidden;
+}
+
+/*Pone divs y tablas en el centro horizontalmente*/
+.centrar
+{
+    margin: auto;
+}
+
+
+/* Estilo para los campos de texto */
+.campoTexto
+{
+    border: 1px groove #4088B7;
+    font-size: 14px;
+    color: #545454;
+    width: 150px;
+    height: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+}

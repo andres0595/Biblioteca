@@ -1,0 +1,203 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="pagina_director.master.cs"
+    Inherits="Inicial.Vista.master.pagina_director" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>
+        <asp:ContentPlaceHolder ID="titulo" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <link href="../../Recursos/css/general.css" rel="stylesheet" type="text/css" />
+    <link href="../../Recursos/css/paginaMaestra.css" rel="stylesheet" type="text/css" />
+    <script src="../../Recursos/js/jquery.js" type="text/javascript"></script>
+    <script src="../../Recursos/js/validarCampos.js" type="text/javascript"></script>
+    <script src="../../Recursos/js/md5.js" type="text/javascript"></script>
+    <script src="../../Recursos/js/ajax/cerrarSesion.js" type="text/javascript"></script>
+    <script src="../../Recursos/js/ajax/paginaMaestra.js" type="text/javascript"></script>
+    <%-------------------------------------------------------------------------%>
+    <script src="../../Recursos/js/cerrarSesion.js" type="text/javascript"></script>
+    <%-------------------------------------------------------------------------%>
+    <link href="../../Recursos/css/cerrarSesion/styles.css" rel="stylesheet" type="text/css" />
+    <%-------------------------------------------------------------------------%>
+    <% if ((Session["nom_usuario"]) != null)
+       {
+    %>
+    <!-- Estilos para el menu -->
+    <link href="../../Recursos/css/menu.css" rel="stylesheet" type="text/css" />
+    <% }
+       else
+       { %>
+    <!-- Estilos para el formulario de login -->
+    <link href="../../Recursos/css/login.css" rel="stylesheet" type="text/css" />
+    <% } %>
+</head>
+<body>
+    <table id="tbContenedor" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="bannerProducto">
+                <img style="width: 100%; height: 85px;" src="../../Recursos/imagenes/paginaMaestra/headAzul.jpg" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="10">
+                <table class="tbBanner" border="0" cellpadding="0" cellspacing="0">
+                    <%if (Session["nom_usuario"] != null)
+                      {  %>
+                    <tr>
+                        <%
+                          if (Session["director"] == "")
+                          {%>
+                        <td colspan="3">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="barraSesionUsuario">
+                                        En sesi&oacute;n1: &nbsp;&nbsp;
+                                        <% Response.Write(Session["nom_usuario"]);%>
+                                    </td>
+                                    <td class="barraSesionEmpresa">
+                                        <%
+                              if (Session["director"] == "")
+                              {
+                                  Response.Write("EMPRESA ACTUAL: " + Session["nombre_empresa"]);
+                              }
+                                        %>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <%}
+                          else
+                          {%>
+                        <td class="barraSesionUsuario" colspan="2">
+                            <div id="divSesion2">
+                                <div class="margenCerrarSesion" id="fdw">
+                                    <nav>
+                                    <ul class="margenCerrarSesion" >
+                                        <li class="arrow "><a href="#"> En sesión: &nbsp;&nbsp; <% Response.Write(Session["nom_usuario"]);%>&nbsp;&nbsp;<img style="width:10px" alt="Cerrar Sesion" src="../../Recursos/imagenes/administracion/flecha_abajo.png" /></a>
+                                            <ul style="display: none;width: 250px;" class="arrow sub_menu ">
+                                                <img id="imgLogoADM" style="width:94px;margin-left:68px;margin-top:5px;" src="../../Fotos/<% if(Session["sesion_foto"] != null && !Session["sesion_foto"].ToString().Equals("")) Response.Write(Session["sesion_foto"]); else Response.Write("no_disponible.jpg"); %>"alt="" />
+                                                <li><a href=""><azul class="azulcerrarSesion">Documento:</azul> <% Response.Write(Session["sesion_documento"]);%> </a></li>
+                                                <li><a href=""><azul class="azulcerrarSesion">Usuario:</azul> <% string usuario = Session["usu_sistema"].ToString(); Response.Write(usuario.ToLower());%> </a></li>
+                                                <li><a href=""><azul class="azulcerrarSesion">Email:</azul> <%string email = Session["mail_usuario"].ToString(); if (email != "") Response.Write(email);%> </a></li>
+                                                <li><a href='javascript:void(0)' onclick="cerrarSesion('1')"><azul class="azulcerrarSesion">.:: Cerrar Sesi&oacute;n ::.</azul></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                </div>
+                            </div>
+                        </td>
+                        <%} %>
+                    </tr>
+                    <%
+                      }%>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="alinearArriba" colspan="2">
+                <div id="divContenidoForm" class="centrar">
+                    <asp:ContentPlaceHolder ID="contenidoSistema" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="10">
+                <div style="width: 100%; background-color: #1269A2; height: 100px;">
+                    <table class="centrarPie" border="0" cellpadding="0">
+                        <tr>
+                            <td align="center" colspan="3">
+                                <a href="http://www.bpolatina.co//" target="_blank">
+                                    <img src="../../Recursos/imagenes/paginaMaestra/pie.png" alt="WD Visual" style="margin-top: 5px; margin-bottom: 3px; width:77px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <div>
+                                   <span class="piePaginaInicio">&reg; Todos los Derechos Reservados - All rights reserved
+                                        - BPO Latina S.A.S Colombia <% Response.Write(DateTime.Now.Year); %>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div id="ventana" class="ventanaConfirmacion ocultar">
+        <table>
+            <tr>
+                <td class="encabezado">
+                    <span>Mensaje</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="msjVentana" class="msjVentana">
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="ventanaProg" class="ventanaConfirmacion ocultar">
+        <table>
+            <tr>
+                <td class="encabezado">
+                    <span>Mensaje</span>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <label id="msjVentanaProg" class="msjVentana">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div id="divProgreso">
+                        <img src="../../Recursos/imagenes/generales/progress_bar.gif" title="Progreso" alt="Procesando..." /></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--Ventana con Mensaje para Confirmar Eliminación-->
+    <div style="display: none;">
+        <div id="confirmaEliminar" class="fancyEliminar">
+            <table class="centrar">
+                <tr>
+                    <td class="encabezado">
+                        <span>Mensaje</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>&#191;CONFIRMA QUE DESEA ELIMINAR ESTA INFORMACI&Oacute;N &#63;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table>
+                            <tr>
+                                <td align="center">
+                                    <span>Aceptar</span><br />
+                                    <img src="../../Recursos/imagenes/administracion/aceptar.png" onclick="eliminar()"
+                                        alt="Aceptar" class="imgAdmin" />
+                                </td>
+                                <td align="center">
+                                    <span>Cancelar</span><br />
+                                    <img src="../../Recursos/imagenes/administracion/cancelar.png" onclick="cancelaEliminar()"
+                                        alt="Cancelar" class="imgAdmin" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+﻿/*Estilo para la leyenda de derechos reservados*/
+#piePagina
+{
+    color: #293955;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+#piePaginaInicio
+{
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+.piePaginaInicio
+{
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Div que contiene a cualquier formulario */
+#divContenidoForm
+{
+    /*min-height: 450px;*/
+    height:441px;
+}
+
+/*Tabla que contiene toda la pagina es el contenedor general*/
+#tbContenedor
+{
+    width: 970px;
+    margin: auto;
+    border: 2px solid #CBCBCB;
+    background-color: #FFF;
+    -webkit-border-radius: 10px;
+    border-radius: 10px 10px 10px 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+/*Para la parte del banner, obteniendo una dimension width del 100% de acuerdo a la resolucion de la pantalla*/
+.tbBanner
+{
+    width: 100%;
+    border: 0px;
+    border: inset 0pt;
+}
+
+/*En el banner ocupa la imagen del logo de la empresa*/
+.bannerEmpresa
+{
+    width: 15%;
+    background-color: #FFF;
+}
+
+/*En el banner ocupa la imagen del nombre del cliente*/
+.centroBanner
+{
+    background-color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    width: 70%;
+}
+
+/*En el banner ocupa la imagen del logo del producto*/
+.bannerProducto
+{
+    background-color: #FFF;
+    width: 15%;
+}
+
+/*barra donde indica salir y el nombre del que esta en sesion*/
+.barraSesionUsuario
+{
+    /*text-align: right;*/
+    color: #1269a2;
+    font-weight: bold;
+    font-size: 12px;
+    width: 10%; /* franja de la barra */
+    border-right: solid #FFF;
+    -o-border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    /*background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(241,241,241,1)), color-stop(0%,rgba(232,232,232,1)), color-stop(57%,rgba(237,237,237,1)), color-stop(100%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1)));*/
+}
+
+.barraSesionUsuarioDirector
+{
+    text-align: right;
+    color: #1269a2;
+    font-weight: bold;
+    font-size: 12px;
+    width: 10%; /* franja de la barra */
+    border-right: solid #FFF;
+    -o-border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(241,241,241,1)), color-stop(0%,rgba(232,232,232,1)), color-stop(11%,rgba(237,237,237,1)), color-stop(37%,rgba(255,255,255,1)), color-stop(51%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,1)));
+}
+
+
+/*barra donde indica la empresa seleccionada*/
+.barraSesionEmpresa
+{
+    background-color: #FFF;
+    text-align: center;
+    color: #1269a2;
+    font-weight: bold;
+    font-size: 12px;
+    width: 5%; /* franja de la barra */
+    border-right: solid #FFF;
+    border-left: 5px solid #FFF;
+    border: 10px;
+}
+
+
+.barraSesionSalir
+{
+    /*background-color: #FFF;*/
+    text-align: left;
+    color: #000000;
+    /*font-weight: bold;*/
+    font-size: 12px;
+    width: 10%; /* franja de la barra */
+    -o-border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    background-color:White;
+    /*border-left: solid #FFF;*/
+    /*background: -webkit-linear-gradient(left, #ffffff 57%,#ffffff 59%,#ffffff 62%,#ffffff 77%,#ffffff 79%,#ffffff 80%,#e7e7e7 99%); */
+    /*background: -webkit-linear-gradient(left, #ffffff 19%,#ffffff 52%,#ffffff 54%,#ffffff 70%,#ffffff 79%,#ffffff 79%,#e7e7e7 92%);*/
+}
+
+.barraSesionSalirDirector
+{
+    /*background-color: #FFF;*/
+    text-align: left;
+    color: #1269a2;
+    font-weight: bold;
+    font-size: 12px;
+    width: 10%; /* franja de la barra */
+    -o-border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    /*border-left: solid #FFF;*/
+    /*background: -webkit-linear-gradient(left, #ffffff 57%,#ffffff 59%,#ffffff 62%,#ffffff 77%,#ffffff 79%,#ffffff 80%,#e7e7e7 99%); */
+    background: -webkit-linear-gradient(left, #ffffff 68%,#ffffff 39%,#ffffff 39%,#ffffff 40%,#ffffff 64%,#ffffff 63%,#e7e7e7 97%);
+}
+
+/*Division hover que cambia de color donde indica la opcion de salir o cerra sesion del sistema*/
+
+
+/*La celda donde se ubica el menu*/
+td.menu
+{
+    width: 45px;
+    vertical-align: top;
+}
+
+
+
+/* Tamaño fijo para el div que ocntiene el mapa de google */
+.tbGeolocalizacion
+{
+    width: 500px;
+    height: 300px;
+}
+
+#map_canvas
+{
+    height: 400px;
+    width: 600px;
+}
+
+/*Oculta elementos*/
+.ocultar
+{
+    display: none;
+}
+
+
+/* tamaño fijo para las imagenes del banner */
+.tbBanner td img
+{
+    width: 150px;
+}
+
+/* ESTILO DE LA IMAGEN DE LC WEB DEL PIE DE PAGINA*/
+.piePagina img
+{
+    width: 120px;
+}
+
+/* estilo para el menú qeu contiene menús debajo */
+li.menuPadre > a:before
+{
+    background-image: url('../imagenes/Administracion/menu_abajo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "+ ";
+    color: #FFF;
+    font-weight: bold;
+}
+
+.paginasBorde
+{
+    width: 50px;
+    font-family: "Arial";
+    font-style: normal;
+    font-size: 20px;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #1269A2;
+}
+
+.paginas
+{
+    width: 50px;
+    font-family: "Arial";
+    font-style: normal;
+    font-size: 20px;
+    vertical-align: middle;
+    color: #1269A2;
+}
+
+.contadorBorde
+{
+    width: 50px;
+    font-family: "Arial";
+    font-style: normal;
+    font-size: 14px;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #1269A2;
+}
+
+.contador
+{
+    width: 50px;
+    font-family: "Arial";
+    font-style: normal;
+    font-size: 14px;
+    vertical-align: middle;
+    color: #1269A2;
+}
+
+.azulcerrarSesion
+{
+    color:#1269a2;
+    font-weight:bold;
+}
+
+#divSesion2
+{
+    margin-left:634px;
+}

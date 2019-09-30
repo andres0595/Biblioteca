@@ -1,0 +1,26 @@
+C:\Users\FAMILIA GUERRERO\Desktop\Proyectos\Fracturas\Inicial\bin\Inicial.dll
+C:\Users\FAMILIA GUERRERO\Desktop\Proyectos\Fracturas\Inicial\bin\Inicial.pdb
+C:\Users\FAMILIA GUERRERO\Desktop\Proyectos\Fracturas\Inicial\obj\Debug\Inicial.dll
+C:\Users\FAMILIA GUERRERO\Desktop\Proyectos\Fracturas\Inicial\obj\Debug\Inicial.pdb
+C:\Users\FAMILIA GUERRERO\Desktop\CONEXIA\Inicial\bin\Inicial.dll.config
+C:\Users\FAMILIA GUERRERO\Desktop\CONEXIA\Inicial\bin\Inicial.dll
+C:\Users\FAMILIA GUERRERO\Desktop\CONEXIA\Inicial\bin\Inicial.pdb
+C:\Users\FAMILIA GUERRERO\Desktop\CONEXIA\Inicial\obj\Debug\Inicial.dll
+C:\Users\FAMILIA GUERRERO\Desktop\CONEXIA\Inicial\obj\Debug\Inicial.pdb
+E:\CONEXIA\Inicial\bin\Inicial.dll.config
+E:\CONEXIA\Inicial\bin\Inicial.dll
+E:\CONEXIA\Inicial\bin\Inicial.pdb
+E:\CONEXIA\Inicial\obj\Debug\Inicial.csprojAssemblyReference.cache
+E:\CONEXIA\Inicial\obj\Debug\Inicial.csproj.CoreCompileInputs.cache
+E:\CONEXIA\Inicial\obj\Debug\Inicial.dll
+E:\CONEXIA\Inicial\obj\Debug\Inicial.pdb
+D:\Biblioteca\Inicial\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Biblioteca\Inicial\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Biblioteca\Inicial\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Biblioteca\Inicial\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Biblioteca\Inicial\bin\Inicial.dll.config
+D:\Biblioteca\Inicial\bin\Inicial.dll
+D:\Biblioteca\Inicial\bin\Inicial.pdb
+D:\Biblioteca\Inicial\bin\Microsoft.SqlServer.Types.dll
+D:\Biblioteca\Inicial\obj\Debug\Inicial.dll
+D:\Biblioteca\Inicial\obj\Debug\Inicial.pdb
