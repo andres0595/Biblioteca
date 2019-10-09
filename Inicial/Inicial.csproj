@@ -534,6 +534,7 @@
     <Content Include="Recursos\js\ajax\presentacion.js" />
     <Content Include="Recursos\js\ajax\registra_empresas.js" />
     <Content Include="Recursos\js\ajax\rol.js" />
+    <Content Include="Recursos\js\ajax\SolicitudPrestamo.js" />
     <Content Include="Recursos\js\ajax\usuario.js" />
     <Content Include="Recursos\js\ajax\usuarios_conectados.js" />
     <Content Include="Recursos\js\ajax\verifica_sesion.js" />
@@ -937,6 +938,7 @@
     <Content Include="Vista\general\login_directo.aspx" />
     <Content Include="Vista\general\login_mantenimiento.aspx" />
     <Content Include="Vista\general\mantenimiento.aspx" />
+    <Content Include="Vista\SolicitudPrestamo\SolicitudPrestamo.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1274,6 +1276,13 @@
     <Compile Include="Vista\master\pagina_mantenimiento.Master.designer.cs">
       <DependentUpon>pagina_mantenimiento.Master</DependentUpon>
     </Compile>
+    <Compile Include="Vista\SolicitudPrestamo\SolicitudPrestamo.aspx.cs">
+      <DependentUpon>SolicitudPrestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\SolicitudPrestamo\SolicitudPrestamo.aspx.designer.cs">
+      <DependentUpon>SolicitudPrestamo.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Controlador\Mantenimiento\del.bat" />
@@ -1293,7 +1302,6 @@
   <ItemGroup>
     <Folder Include="Recursos\imagenes\reporteIndicadores\Oportunidad\" />
     <Folder Include="Recursos\imagenes\reporteIndicadores\SeguimientoPeriodico\" />
-    <Folder Include="Vista\parametrizacion\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

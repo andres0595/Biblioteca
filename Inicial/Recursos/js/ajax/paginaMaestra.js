@@ -133,12 +133,12 @@ function pintaMenu(am) {
                 id = "li" + id;
                 try {
                     switch (id.length) {
-                        /*Raiz de inicio de consultor*/ 
+                        /*Raiz de inicio de consultor*/
                         case 4:
                             document.getElementById(id).style.display = 'block';
                             break;
 
-                        /*Nivel 1*/ 
+                        /*Nivel 1*/
                         case 5:
                             document.getElementById(id).style.display = 'block';
                             try {
@@ -154,7 +154,7 @@ function pintaMenu(am) {
                             }
                             break;
 
-                        /*Nivel 2*/ 
+                        /*Nivel 2*/
                         case 7:
                             document.getElementById(id).style.display = 'block';
 
@@ -169,7 +169,7 @@ function pintaMenu(am) {
                             }
                             break;
 
-                        /*Nivel 2 con numeros iguales o superiores a 10 por ejemplo 1.1.12*/ 
+                        /*Nivel 2 con numeros iguales o superiores a 10 por ejemplo 1.1.12*/
                         case 8:
                             document.getElementById(id).style.display = 'block';
                             try {
@@ -190,7 +190,7 @@ function pintaMenu(am) {
                             }
                             break;
 
-                        /*Nivel 4*/ 
+                        /*Nivel 4*/
                         case 10:
                             document.getElementById(id).style.display = 'block';
                             try {
@@ -219,7 +219,7 @@ function pintaMenu(am) {
                             }
                             break;
 
-                        /*Nivel 4 con numeros iguales o superiores a 10 por ejemplo 51.1.1.12*/ 
+                        /*Nivel 4 con numeros iguales o superiores a 10 por ejemplo 51.1.1.12*/
                         case 11:
                             document.getElementById(id).style.display = 'block';
                             try {
@@ -607,15 +607,15 @@ function permisosParaMenu_processResponse(res) {
                                 $('.BotonTramites').html('');
                                 break;
 
-//                            case 'Estados':
-//                                try {
-//                                    document.getElementById('imgEstados').innerHTML = '';
-//                                } catch (e) {
-//                                }
-//                                $('.botonEstados').html('');
-//                                break;
+                            //                            case 'Estados':
+                            //                                try {
+                            //                                    document.getElementById('imgEstados').innerHTML = '';
+                            //                                } catch (e) {
+                            //                                }
+                            //                                $('.botonEstados').html('');
+                            //                                break;
 
-                          
+
 
                         }
                     } catch (mierror) {
@@ -1046,7 +1046,7 @@ function pieDePaginaListar(datos, inNomMetodo) {
     return tmpPieRetorna;
 }
 
-function pieDePaginaListar_Suma_Columna(datos, total ,inNomMetodo) {
+function pieDePaginaListar_Suma_Columna(datos, total, inNomMetodo) {
     var PagAct = datos.PagAct;
     var PagSig = datos.PagSig;
     var PagAnt = datos.PagAnt;
@@ -1054,8 +1054,8 @@ function pieDePaginaListar_Suma_Columna(datos, total ,inNomMetodo) {
     var Total = datos.Total;
     var tmpPieRetorna = "";
 
-  //  var Cantidad_Datos = datos.data[40];
-    
+    //  var Cantidad_Datos = datos.data[40];
+
     tmpPieRetorna = "<table class='centrar'><tr>";
     if (PagAct > 1)
         tmpPieRetorna += "<td><span onclick='" + inNomMetodo + "(1)' ><img class='imgPaginacionHabilitada' border='0' src='../../Recursos/imagenes/listado/inicio.png' /></span></td>";
@@ -1080,7 +1080,7 @@ function pieDePaginaListar_Suma_Columna(datos, total ,inNomMetodo) {
         tmpPieRetorna += "<td><img border=0 src='../../Recursos/imagenes/listado/ultimo_gris.png' class='imgPaginacionDeshabilitada' /></td>";
     tmpPieRetorna += "</tr>";
     tmpPieRetorna += "<tr align='center' class='centrar'><td colspan='7' align='center' class='centrar'><span class='contador'> En total: </span><span class='contadorBorde'>" + Total + "</span><span class='contador'> registros</span><span class='contador'> y </span><span class='contadorBorde'>" + total + "</span><span class='contador'> Trámites.</span></td>";
-//    tmpPieRetorna += "<td colspan='7' align='center' class='centrar'><span class='contador'> En total </span><span class='contadorBorde'>" + Cantidad_Datos + "</span><span class='contador'> Trámites.</span></td></tr>";
+    //    tmpPieRetorna += "<td colspan='7' align='center' class='centrar'><span class='contador'> En total </span><span class='contadorBorde'>" + Cantidad_Datos + "</span><span class='contador'> Trámites.</span></td></tr>";
     tmpPieRetorna += "</table>";
 
 
@@ -1166,7 +1166,7 @@ function pieDePaginaListar_Uno_X_Uno(datos, inNomMetodo) {
     return tmpPieRetorna;
 }
 
-function pieDePaginaListar_BuscarPaciente(datos, inNomMetodo) {   
+function pieDePaginaListar_BuscarPaciente(datos, inNomMetodo) {
     var PagAct = datos.PagAct;
     var PagSig = datos.PagSig;
     var PagAnt = datos.PagAnt;
@@ -1199,9 +1199,9 @@ function pieDePaginaListar_BuscarPaciente(datos, inNomMetodo) {
     tmpPieRetorna += "</tr>";
     //tmpPieRetorna += "<tr align='center' class='centrar'><td align='center' class='centrar tooltip'><span class='contador'> En total </span><span class='contadorBorde'>" + Total + "</span><td 'class='encabezado'>CANTIDAD PACIENTES NUEVOS</td><td class='cuerpoListado10'>" + nuevos+ "</td><span class='contador'> registros.</span></td></tr>";
     //
-//    tmpPieRetorna += "<tr align='center' class='centrar' onmouseover='mostrarDiv();' onmouseout='ocultarDiv();'><td align='center' class='centrar' colspan='7'><span class='contador'> En total </span><span class='contadorBorde' >" + Total + "</span><span class='contador'> registros.</span><span id='divPrueba'></span></td></tr>";
+    //    tmpPieRetorna += "<tr align='center' class='centrar' onmouseover='mostrarDiv();' onmouseout='ocultarDiv();'><td align='center' class='centrar' colspan='7'><span class='contador'> En total </span><span class='contadorBorde' >" + Total + "</span><span class='contador'> registros.</span><span id='divPrueba'></span></td></tr>";
 
-//    tmpPieRetorna += "<tr align='center' class='centrar' onmouseover='holamundo();' onmouseout='holamundo2();'><td align='center' class='centrar' colspan='7'><span class='contador'> En total </span><span class='contadorBorde' >" + Total + "</span><span class='contador'> registros.</span><span id='divPrueba'></span></td></tr>";
+    //    tmpPieRetorna += "<tr align='center' class='centrar' onmouseover='holamundo();' onmouseout='holamundo2();'><td align='center' class='centrar' colspan='7'><span class='contador'> En total </span><span class='contadorBorde' >" + Total + "</span><span class='contador'> registros.</span><span id='divPrueba'></span></td></tr>";
 
     tmpPieRetorna += "<tr align='center' class='centrar'><td align='center' class='centrar' colspan='7'><span class='contador'> En total </span><span class='contadorBorde' >" + Total + "</span><span class='contador'> registros.</span><span id='divPrueba' style='position:fixed;'></span></td></tr>";
 
@@ -1247,7 +1247,7 @@ function pieDePaginaListar(datos, inNomMetodo) {
     return tmpPieRetorna;
 }
 
-function pieDePaginaListar_Suma_Columna(datos, total ,inNomMetodo) {
+function pieDePaginaListar_Suma_Columna(datos, total, inNomMetodo) {
     var PagAct = datos.PagAct;
     var PagSig = datos.PagSig;
     var PagAnt = datos.PagAnt;
@@ -1255,8 +1255,8 @@ function pieDePaginaListar_Suma_Columna(datos, total ,inNomMetodo) {
     var Total = datos.Total;
     var tmpPieRetorna = "";
 
-  //  var Cantidad_Datos = datos.data[40];
-    
+    //  var Cantidad_Datos = datos.data[40];
+
     tmpPieRetorna = "<table class='centrar'><tr>";
     if (PagAct > 1)
         tmpPieRetorna += "<td><span onclick='" + inNomMetodo + "(1)' ><img class='imgPaginacionHabilitada' border='0' src='../../Recursos/imagenes/listado/inicio.png' /></span></td>";
@@ -1281,7 +1281,7 @@ function pieDePaginaListar_Suma_Columna(datos, total ,inNomMetodo) {
         tmpPieRetorna += "<td><img border=0 src='../../Recursos/imagenes/listado/ultimo_gris.png' class='imgPaginacionDeshabilitada' /></td>";
     tmpPieRetorna += "</tr>";
     tmpPieRetorna += "<tr align='center' class='centrar'><td colspan='7' align='center' class='centrar'><span class='contador'> En total: </span><span class='contadorBorde'>" + Total + "</span><span class='contador'> registros</span><span class='contador'> y </span><span class='contadorBorde'>" + total + "</span><span class='contador'> Trámites.</span></td>";
-//    tmpPieRetorna += "<td colspan='7' align='center' class='centrar'><span class='contador'> En total </span><span class='contadorBorde'>" + Cantidad_Datos + "</span><span class='contador'> Trámites.</span></td></tr>";
+    //    tmpPieRetorna += "<td colspan='7' align='center' class='centrar'><span class='contador'> En total </span><span class='contadorBorde'>" + Cantidad_Datos + "</span><span class='contador'> Trámites.</span></td></tr>";
     tmpPieRetorna += "</table>";
 
 
@@ -1324,7 +1324,7 @@ function pieDePaginaListar(datos, inNomMetodo) {
     return tmpPieRetorna;
 }
 
-function pieDePaginaListar_Suma_Columna(datos, total ,inNomMetodo) {
+function pieDePaginaListar_Suma_Columna(datos, total, inNomMetodo) {
     var PagAct = datos.PagAct;
     var PagSig = datos.PagSig;
     var PagAnt = datos.PagAnt;
@@ -1332,8 +1332,8 @@ function pieDePaginaListar_Suma_Columna(datos, total ,inNomMetodo) {
     var Total = datos.Total;
     var tmpPieRetorna = "";
 
-  //  var Cantidad_Datos = datos.data[40];
-    
+    //  var Cantidad_Datos = datos.data[40];
+
     tmpPieRetorna = "<table class='centrar'><tr>";
     if (PagAct > 1)
         tmpPieRetorna += "<td><span onclick='" + inNomMetodo + "(1)' ><img class='imgPaginacionHabilitada' border='0' src='../../Recursos/imagenes/listado/inicio.png' /></span></td>";
@@ -1358,7 +1358,7 @@ function pieDePaginaListar_Suma_Columna(datos, total ,inNomMetodo) {
         tmpPieRetorna += "<td><img border=0 src='../../Recursos/imagenes/listado/ultimo_gris.png' class='imgPaginacionDeshabilitada' /></td>";
     tmpPieRetorna += "</tr>";
     tmpPieRetorna += "<tr align='center' class='centrar'><td colspan='7' align='center' class='centrar'><span class='contador'> En total: </span><span class='contadorBorde'>" + Total + "</span><span class='contador'> registros</span><span class='contador'> y </span><span class='contadorBorde'>" + total + "</span><span class='contador'> Trámites.</span></td>";
-//    tmpPieRetorna += "<td colspan='7' align='center' class='centrar'><span class='contador'> En total </span><span class='contadorBorde'>" + Cantidad_Datos + "</span><span class='contador'> Trámites.</span></td></tr>";
+    //    tmpPieRetorna += "<td colspan='7' align='center' class='centrar'><span class='contador'> En total </span><span class='contadorBorde'>" + Cantidad_Datos + "</span><span class='contador'> Trámites.</span></td></tr>";
     tmpPieRetorna += "</table>";
 
 
@@ -1378,17 +1378,17 @@ function pieDePaginaListar_tabulacion(datos, inNomMetodo) {
 
         tmpPieRetorna += "<td><div><input type='image' class='imgPaginacionHabilitada' border='0' src='../../Recursos/imagenes/listado/inicio.png'  onclick='" + inNomMetodo + "(1)'/></div></td>";
 
-        //tmpPieRetorna += "<td><span onclick='" + inNomMetodo + "(1)' ><img class='imgPaginacionHabilitada' border='0' src='../../Recursos/imagenes/listado/inicio.png' /></span></td>";
+    //tmpPieRetorna += "<td><span onclick='" + inNomMetodo + "(1)' ><img class='imgPaginacionHabilitada' border='0' src='../../Recursos/imagenes/listado/inicio.png' /></span></td>";
     else
         tmpPieRetorna += "<td><div><input type='image' class='imgPaginacionDeshabilitada' border='0' src='../../Recursos/imagenes/listado/inicio_gris.png'/></div></td>";
 
-       //tmpPieRetorna += "<td><img class='imgPaginacionDeshabilitada' border='0' src='../../Recursos/imagenes/listado/inicio_gris.png' /></td>";
+    //tmpPieRetorna += "<td><img class='imgPaginacionDeshabilitada' border='0' src='../../Recursos/imagenes/listado/inicio_gris.png' /></td>";
 
     if (PagAct != 1)
 
         tmpPieRetorna += "<td><div><input type='image' class='imgPaginacionHabilitada' border='0' src='../../Recursos/imagenes/listado/anterior.png'  onclick=\"" + inNomMetodo + "('" + PagAnt + "')\"></div></td>";
 
-        //tmpPieRetorna += "<td><span onclick=\"" + inNomMetodo + "('" + PagAnt + "')\" ><img class='imgPaginacionHabilitada' border=0 src='../../Recursos/imagenes/listado/anterior.png' /></span></td>";
+    //tmpPieRetorna += "<td><span onclick=\"" + inNomMetodo + "('" + PagAnt + "')\" ><img class='imgPaginacionHabilitada' border=0 src='../../Recursos/imagenes/listado/anterior.png' /></span></td>";
     else
 
         tmpPieRetorna += "<td><div><input type='image' class='imgPaginacionDeshabilitada' border='0' src='../../Recursos/imagenes/listado/anterior_gris.png'/></div></td>";
@@ -1402,20 +1402,20 @@ function pieDePaginaListar_tabulacion(datos, inNomMetodo) {
     if (PagAct < PagUlt)
         tmpPieRetorna += "<td><div><input type='image' class='imgPaginacionHabilitada imgPaginacion' border='0' src='../../Recursos/imagenes/listado/siguiente.png'  onclick=\"" + inNomMetodo + "('" + PagSig + "')\"></div></td>";
 
-        //tmpPieRetorna += "<td><span onclick=\"" + inNomMetodo + "('" + PagSig + "')\" ><img class='imgPaginacionHabilitada' class='imgPaginacion' border=0 src='../../Recursos/imagenes/listado/siguiente.png' /></span></td>";
+    //tmpPieRetorna += "<td><span onclick=\"" + inNomMetodo + "('" + PagSig + "')\" ><img class='imgPaginacionHabilitada' class='imgPaginacion' border=0 src='../../Recursos/imagenes/listado/siguiente.png' /></span></td>";
     else
         tmpPieRetorna += "<td><div><input type='image' class='imgPaginacionDeshabilitada' border='0' src='../../Recursos/imagenes/listado/siguiente_gris.png'/></div></td>";
 
-        //tmpPieRetorna += "<td><img border=0 src='../../Recursos/imagenes/listado/siguiente_gris.png' class='imgPaginacionDeshabilitada' /></td>";
+    //tmpPieRetorna += "<td><img border=0 src='../../Recursos/imagenes/listado/siguiente_gris.png' class='imgPaginacionDeshabilitada' /></td>";
 
     if (PagAct != PagUlt)
         tmpPieRetorna += "<td><div><input type='image' class='imgPaginacionHabilitada imgPaginacion' border='0' src='../../Recursos/imagenes/listado/ultimo.png'  onclick=\"" + inNomMetodo + "('" + PagUlt + "')\"></div></td>";
 
-        //tmpPieRetorna += "<td><span onclick='" + inNomMetodo + "(" + PagUlt + ")' ><img  class='imgPaginacionHabilitada' class='imgPaginacion' border=0  src='../../Recursos/imagenes/listado/ultimo.png' /></span></td>";
+    //tmpPieRetorna += "<td><span onclick='" + inNomMetodo + "(" + PagUlt + ")' ><img  class='imgPaginacionHabilitada' class='imgPaginacion' border=0  src='../../Recursos/imagenes/listado/ultimo.png' /></span></td>";
     else
         tmpPieRetorna += "<td><div><input type='image' class='imgPaginacionDeshabilitada' border='0' src='../../Recursos/imagenes/listado/ultimo_gris.png'/></div></td>";
 
-       // tmpPieRetorna += "<td><img border=0 src='../../Recursos/imagenes/listado/ultimo_gris.png' class='imgPaginacionDeshabilitada' /></td>";
+    // tmpPieRetorna += "<td><img border=0 src='../../Recursos/imagenes/listado/ultimo_gris.png' class='imgPaginacionDeshabilitada' /></td>";
 
     tmpPieRetorna += "</tr>";
     tmpPieRetorna += "<tr align='center' class='centrar'><td colspan='7' align='center' class='centrar'><span class='contador'> En total </span><span class='contadorBorde'>" + Total + "</span><span class='contador'> registros.</span></td></tr>";
@@ -1429,7 +1429,7 @@ function pieDePaginaListar_tabulacion(datos, inNomMetodo) {
 
 function mostrarDiv() {
     listarEstados();
-   // document.getElementById("divPrueba").innerHTML = tabla;
+    // document.getElementById("divPrueba").innerHTML = tabla;
     document.getElementById("divPrueba").style.display = "block";
 }
 
@@ -1447,7 +1447,7 @@ function listarEstados() {
 
 function listarEstados_processResponse(res) {
     try {
-        var info = eval('(' + res + ')');     
+        var info = eval('(' + res + ')');
         var divTerceros = document.getElementById('divPrueba');
         if (res != "{'msj':0}") {
             var datosRows = info.data;
@@ -1457,57 +1457,57 @@ function listarEstados_processResponse(res) {
             var vacio = "--";
             var tabla = "<table class='listadoGeneral centrar' style='text-align: center; position:fixed; width:232px;'><tr><td class='encabezado' colspan='2'>CANTIDAD DE PACIENTES POR ESTADO</td></tr>";
 
-                var id =  info.data[0];
-                var sin_estado = info.data[1];
-                var nuevo = info.data[3];
-                var acepta = info.data[5];
-                var noCont_2_3 = info.data[7];
-                var noCont_Sanitas = info.data[9];
-                var actualizado = info.data[11];
-                var noacepta = info.data[13];
-                var dudosos = info.data[15];
-                //var datos_errados = info.data[17];
-                var fallecidos = info.data[17];
-                var prepagada = info.data[19];
-                var sin_cobertura = info.data[21];                
-                var total = info.data[23];
-
-              
-
-                //if (ctl) {
-                //    claseAplicar = "cuerpoListado9";
-                //    claseAplicar2 = "cuerpoListado3";
-                //} else {
-                //    claseAplicar = "cuerpoListado10";
-                //    claseAplicar2 = "cuerpoListado5";
-                //}
-
-               //ctl = !ctl;
-              //  tabla += '<tr>';
+            var id = info.data[0];
+            var sin_estado = info.data[1];
+            var nuevo = info.data[3];
+            var acepta = info.data[5];
+            var noCont_2_3 = info.data[7];
+            var noCont_Sanitas = info.data[9];
+            var actualizado = info.data[11];
+            var noacepta = info.data[13];
+            var dudosos = info.data[15];
+            //var datos_errados = info.data[17];
+            var fallecidos = info.data[17];
+            var prepagada = info.data[19];
+            var sin_cobertura = info.data[21];
+            var total = info.data[23];
 
 
-                tabla += "<tr><td class='encabezado' >SIN ESTADO</td><td class='cuerpoListado3' style='width:87px;'>" + ((sin_estado == "") ? vacio : unescape(sin_estado)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >NUEVO</td><td class='cuerpoListado3' style='width:87px;'>" + ((nuevo == "") ? vacio : unescape(nuevo)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >ACEPTA</td><td class='cuerpoListado3' style='width:87px;'>" + ((acepta == "") ? vacio : unescape(acepta)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >NO CONTACTABLE 2DA Y 3RA</td><td class='cuerpoListado3' style='width:87px;'>" + ((noCont_2_3 == "") ? vacio : unescape(noCont_2_3)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >NO CONTACTABLE SANITAS</td><td class='cuerpoListado3' style='width:87px;'>" + ((noCont_Sanitas == "") ? vacio : unescape(noCont_Sanitas)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >ACTUALIZADOS</td><td class='cuerpoListado3' style='width:87px;'>" + ((actualizado == "") ? vacio : unescape(actualizado)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >NO ACEPTA</td><td class='cuerpoListado3' style='width:87px;'>" + ((noacepta == "") ? vacio : unescape(noacepta)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >DUDOSOS</td><td class='cuerpoListado3' style='width:87px;'>" + ((dudosos == "") ? vacio : unescape(dudosos)) + "</td></tr>";
-                //tabla += "<tr><td class='encabezado' >DATOS ERRADOS</td><td class='cuerpoListado3' style='width:87px;' >" + ((datos_errados == "") ? vacio : unescape(datos_errados)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >FALLECIDOS</td><td class='cuerpoListado3' style='width:87px;' >" + ((fallecidos == "") ? vacio : unescape(fallecidos)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >PREPAGADA</td><td class='cuerpoListado3' style='width:87px;' >" + ((prepagada == "") ? vacio : unescape(prepagada)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >SIN COBERTURA</td><td class='cuerpoListado3' style='width:87px;' >" + ((sin_cobertura == "") ? vacio : unescape(sin_cobertura)) + "</td></tr>";
-                tabla += "<tr><td class='encabezado' >TOTAL</td><td class='cuerpoListado3' style='width:87px;' >" + ((total == "") ? vacio : unescape(total)) + "</td></tr>";
 
-               // tabla += '</tr>';
-            
+            //if (ctl) {
+            //    claseAplicar = "cuerpoListado9";
+            //    claseAplicar2 = "cuerpoListado3";
+            //} else {
+            //    claseAplicar = "cuerpoListado10";
+            //    claseAplicar2 = "cuerpoListado5";
+            //}
+
+            //ctl = !ctl;
+            //  tabla += '<tr>';
+
+
+            tabla += "<tr><td class='encabezado' >SIN ESTADO</td><td class='cuerpoListado3' style='width:87px;'>" + ((sin_estado == "") ? vacio : unescape(sin_estado)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >NUEVO</td><td class='cuerpoListado3' style='width:87px;'>" + ((nuevo == "") ? vacio : unescape(nuevo)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >ACEPTA</td><td class='cuerpoListado3' style='width:87px;'>" + ((acepta == "") ? vacio : unescape(acepta)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >NO CONTACTABLE 2DA Y 3RA</td><td class='cuerpoListado3' style='width:87px;'>" + ((noCont_2_3 == "") ? vacio : unescape(noCont_2_3)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >NO CONTACTABLE SANITAS</td><td class='cuerpoListado3' style='width:87px;'>" + ((noCont_Sanitas == "") ? vacio : unescape(noCont_Sanitas)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >ACTUALIZADOS</td><td class='cuerpoListado3' style='width:87px;'>" + ((actualizado == "") ? vacio : unescape(actualizado)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >NO ACEPTA</td><td class='cuerpoListado3' style='width:87px;'>" + ((noacepta == "") ? vacio : unescape(noacepta)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >DUDOSOS</td><td class='cuerpoListado3' style='width:87px;'>" + ((dudosos == "") ? vacio : unescape(dudosos)) + "</td></tr>";
+            //tabla += "<tr><td class='encabezado' >DATOS ERRADOS</td><td class='cuerpoListado3' style='width:87px;' >" + ((datos_errados == "") ? vacio : unescape(datos_errados)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >FALLECIDOS</td><td class='cuerpoListado3' style='width:87px;' >" + ((fallecidos == "") ? vacio : unescape(fallecidos)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >PREPAGADA</td><td class='cuerpoListado3' style='width:87px;' >" + ((prepagada == "") ? vacio : unescape(prepagada)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >SIN COBERTURA</td><td class='cuerpoListado3' style='width:87px;' >" + ((sin_cobertura == "") ? vacio : unescape(sin_cobertura)) + "</td></tr>";
+            tabla += "<tr><td class='encabezado' >TOTAL</td><td class='cuerpoListado3' style='width:87px;' >" + ((total == "") ? vacio : unescape(total)) + "</td></tr>";
+
+            // tabla += '</tr>';
+
             tabla += '</table>';
             divTerceros.innerHTML = tabla;
             var idMenuForm = document.getElementById('idMenuForm').innerHTML; // se adiciona esta linea para que se de  el permiso de visualizar el editar despues de cargar
             permisosParaMenu(idMenuForm); // se adiciona esta linea para que se el permiso de visualizar el editar despues de cargar
         } else {
-            divTerceros.innerHTML = mensajecero;           
+            divTerceros.innerHTML = mensajecero;
         }
     } catch (elError) {
     }
@@ -1666,7 +1666,7 @@ function pieDePaginaListar_Resultados(datos, inNomMetodo) {
     //    tmpPieRetorna += "<tr align='center' class='centrar' onmouseover='holamundo();' onmouseout='holamundo2();'><td align='center' class='centrar' colspan='7'><span class='contador'> En total </span><span class='contadorBorde' >" + Total + "</span><span class='contador'> registros.</span><span id='divPrueba'></span></td></tr>";
 
     tmpPieRetorna += "<tr align='center' class='centrar'><td align='center' class='centrar'  colspan='7'><span class='contador'> En total </span><span class='contadorBorde' >" + Total + "</span><span class='contador'> registros.</span></td><br/></tr>";
-   // tmpPieRetorna += "<tr><td style='font-weight: bold;'>Laboratorio<br/><label id='cont5' style='font-size: 18px;'>0</label></td><td></td><td style='font-weight: bold;'>Procedimientos Quirurgicos<br/><label id='cont6' style='font-size: 18px;'>0</label></td><td></td><td style='font-weight: bold;'>Exámen Diagnóstico<br/><label id='cont7' style='font-size: 18px;'>0</label><td></td></td></tr>";
+    // tmpPieRetorna += "<tr><td style='font-weight: bold;'>Laboratorio<br/><label id='cont5' style='font-size: 18px;'>0</label></td><td></td><td style='font-weight: bold;'>Procedimientos Quirurgicos<br/><label id='cont6' style='font-size: 18px;'>0</label></td><td></td><td style='font-weight: bold;'>Exámen Diagnóstico<br/><label id='cont7' style='font-size: 18px;'>0</label><td></td></td></tr>";
     tmpPieRetorna += "<tr><td colspan='7'><div><table class='centrar'><tr><td style='font-weight: bold;'>Laboratorio<br/><label id='cont5' style='font-size: 18px;'>0</label></td><td>&nbsp;&nbsp;</td><td></td><td style='font-weight: bold;'>Procedimientos<br/>Quirurgicos<br/><label id='cont6' style='font-size: 18px;'>0</label></td><td>&nbsp;&nbsp;</td><td style='font-weight: bold;'>Exámen<br/>Diagnóstico<br/><label id='cont7' style='font-size: 18px;'>0</label></td></tr></table></div></td></tr>"
     tmpPieRetorna += "</tr></table>";
     return tmpPieRetorna;
@@ -1771,7 +1771,7 @@ function pieDePaginaListar_TramitesPrioridad(datos, bandera, inNomMetodo) {
 
 
 function confirmaEliminar(id) {
-    globalEliminar = id; 
+    globalEliminar = id;
     $.fancybox({
         'showCloseButton': true,
         'transitionIn': 'fade',
@@ -1912,29 +1912,41 @@ function muestraDiv() {
 
 var idFechaGlobal;
 
-    function ValidaFecha(fecha, id) {
+function ValidaFecha(fecha, id) {
 
-        idFechaGlobal = id;
-        if (fecha != '') {
-            var arrayparameters = new Array();
-            arrayparameters.push(newArg('p', 'Fecha_validar'));
-            arrayparameters.push(newArg('fecha', fecha));
-            var send = arrayparameters.join('&');
-            $.post('../../Controlador/ctlGeneral.aspx', send, ValidaFecha_processResponse);
-        }
+    idFechaGlobal = id;
+    if (fecha != '') {
+        var arrayparameters = new Array();
+        arrayparameters.push(newArg('p', 'Fecha_validar'));
+        arrayparameters.push(newArg('fecha', fecha));
+        var send = arrayparameters.join('&');
+        $.post('../../Controlador/ctlGeneral.aspx', send, ValidaFecha_processResponse);
     }
+}
 
-    function ValidaFecha_processResponse(res) {
-        try {
-            var info = eval('(' + res + ')');
+function ValidaFecha_processResponse(res) {
+    try {
+        var info = eval('(' + res + ')');
 
-            switch (info) {
-                case 0:
-                    muestraVentana("FORMATO DE FECHA INCORRECTO");
-                    document.getElementById(idFechaGlobal).value = "";
-                    break;
+        switch (info) {
+            case 0:
+                muestraVentana("FORMATO DE FECHA INCORRECTO");
+                document.getElementById(idFechaGlobal).value = "";
+                break;
 
-            }
-        } catch (elError) {
         }
+    } catch (elError) {
     }
+}
+
+function OpenFancy(div) {
+    $.fancybox({
+        'showCloseButton': false,
+        'hideOnOverlayClick': false,
+        'transitionIn': 'fade',
+        'transitionOut': 'fade',
+        'transitionOut': 'fade',
+        'enableEscapeButton': false,
+        'href': div
+    });
+}

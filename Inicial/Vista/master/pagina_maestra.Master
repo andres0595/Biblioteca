@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="pagina_maestra.master.cs"
+﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="pagina_maestra.master.cs"
     Inherits="Inicial.Vista.master.pagina_maestra" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -47,9 +47,9 @@
                     <tr>
                         <td class="bannerproducto">
                             <%if (Session["imagen_empresa"] == null)
-                              {  %> 
-                                   
-                                       <img style="width: 100%; height: 85px;" src="../../Recursos/imagenes/paginaMaestra/Head.jpg" />
+                              {  %>
+
+                            <img style="width: 100%; height: 85px;" src="../../Recursos/imagenes/paginaMaestra/Head.jpg" />
                             <%--<img style="width: 100%; height: 85px;" src="../../Recursos/imagenes/paginaMaestra/headAzul.jpg" />--%>
                             <%}
                               else
@@ -175,14 +175,23 @@
                                                     <li title="Inicio" id="liI.1"><a href="<% Response.Write(Page.ResolveUrl("~/vista/administracion/inicio.aspx")); %>">
                                                         <span>inicio</span></a> </li>
                                                 </ul>
-                                            </li>  
-                                           <li id="li0" class='active has-sub'><a href='javascript:void(0)'><span>Facturacion</span></a>
+                                            </li>
+                                            <li id="li0" class='active has-sub'><a href='javascript:void(0)'><span>Administración</span></a>
                                                 <ul>
-                                                    <li title="Registrar Facturación" id="li0.1"><a href="<% Response.Write(Page.ResolveUrl("~/vista/Facturacion/RegistroFactura.aspx")); %>">
-                                                        <span>Registrar Facturación</span></a> </li>                                                  
-                                                                                            
+                                                    <li title="Roles" id="li0.1"><a href="<% Response.Write(Page.ResolveUrl("~/vista/administracion/rol.aspx")); %>">
+                                                        <span>Roles</span></a> </li>
+                                                    <li title="Usuarios" id="li0.6"><a href="<% Response.Write(Page.ResolveUrl("~/vista/administracion/usuario.aspx")); %>">
+                                                        <span>Usuarios</span></a> </li>
+                                                    <li title="Usuarios Conectados" id="li0.8"><a href="<% Response.Write(Page.ResolveUrl("~/vista/administracion/usuarios_conectados.aspx")); %>">
+                                                        <span>Usuarios Conectados</span></a> </li>
                                                 </ul>
-                                            </li>                                      
+                                            </li>
+                                            <li id="li2" class='active has-sub'><a href='javascript:void(0)'><span>Solicitud Prestamo</span></a>
+                                                <ul>
+                                                    <li title="SolicitudPrestamo" id="li2.A"><a href="<% Response.Write(Page.ResolveUrl("~/vista/SolicitudPrestamo/SolicitudPrestamo.aspx")); %>">
+                                                        <span>Solicitud Prestamo</span></a> </li>
+                                                </ul>
+                                            </li>
                                             <li id="limc" class='active has-sub' style="display: block;"><a href="javascript:void(0)">
                                                 <span>Mi cuenta</span></a>
                                                 <ul>
@@ -232,7 +241,6 @@
             <td colspan="10">
                 <div style="width: 100%; background-color: #016678; height: 100px;">
                     <table class="centrarPie" border="0" cellpadding="0">
-                      
                     </table>
                 </div>
             </td>

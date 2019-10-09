@@ -28,7 +28,7 @@ var usuarioGlobal = "-1";
 
 $(document).ready(function () {
     $('#usuario').focus();
-  
+
 
 
     $(function () {
@@ -40,7 +40,7 @@ $(document).ready(function () {
             yearRange: '1940:2030'
         });
     });
-    
+
     //cargarGenero();
     //cargarRH();
     //cargarInfo(1);
@@ -82,9 +82,8 @@ function ingresar() {
     if ((usu != '') && (cla != '')) {
         muestraVentanaProgreso('Identificando...');
         var arrayParameters = new Array();
-        //arrayParameters.push(newArg('p', 'loguear'));
+        arrayParameters.push(newArg('p', 'loguear'));
         // arrayParameters.push(newArg('p', 'loguear_Regional'));
-        arrayParameters.push(newArg('p', 'paCO_Usuarios_logeo'));
         arrayParameters.push(newArg('usuario', usu));
         arrayParameters.push(newArg('clave', cla));
         var send = arrayParameters.join('&');
@@ -111,7 +110,37 @@ function Ingresar_processResponse(res) {
                 document.getElementById('clave').value = '';
                 break;
             case 1:
-                location.href = "../Facturacion/RegistroFactura.aspx";
+                estado = info.data[4];
+                regionales = info.data[14];
+                if (estado != 3 && estado != 4) {// ESTADOS DE INACTIVO O ELIMINADO
+                    var arrayParameters = new Array();
+                    arrayParameters.push(newArg('p', 'sesion'));
+                    arrayParameters.push(newArg('usu', info.data[0]));
+                    arrayParameters.push(newArg('nom', info.data[1]));
+                    arrayParameters.push(newArg('mail', info.data[2]));
+                    arrayParameters.push(newArg('nit', info.data[3]));
+                    arrayParameters.push(newArg('key', info.data[5]));
+
+                    arrayParameters.push(newArg('documento', info.data[6]));
+                    arrayParameters.push(newArg('telefono', info.data[7]));
+                    arrayParameters.push(newArg('area', info.data[8]));
+                    arrayParameters.push(newArg('cargo', info.data[9]));
+                    arrayParameters.push(newArg('foto', info.data[11]));
+                    arrayParameters.push(newArg('rol', info.data[10]));
+                    arrayParameters.push(newArg('nombreEmpresa', info.data[12]));
+                    arrayParameters.push(newArg('departamento', info.data[13]));
+
+                    if (info.data[3] == 'NIT') {
+                        estado = '-10'; //Es Director
+                    }
+
+                    var send = arrayParameters.join('&');
+                    $.post('../../Controlador/ctlLogin.aspx', send, crearSesion_processResponse);
+
+
+                } else {
+                    muestraVentana("Su cuenta se encuentra deshabilitada! <br> Comuniquese con el administrador");
+                }
                 break;
         }
     } catch (elError) {
@@ -159,6 +188,7 @@ function crearSesion_processResponse(res) {
                 location.href = "../general/cambio_clave.aspx";
                 break;
             case '2':
+                capturarIps();
                 location.href = "../general/inicio.aspx";
                 break;
             case '-10':
@@ -224,7 +254,7 @@ function muestraNavegadores(navegador, version) {
             break;
     }
     if (ctl) {
-       //document.getElementById('tablaNavegadores').style.display = 'none';
+        //document.getElementById('tablaNavegadores').style.display = 'none';
     }
 }
 
@@ -313,7 +343,7 @@ function cancelaRecuperaClave() {
 function ventanaRespuesta_processResponse(res) {
     ocultaVentanaProgreso();
     try {
-       
+
         var info = eval('(' + res + ')');
 
         switch (info) {
@@ -326,7 +356,7 @@ function ventanaRespuesta_processResponse(res) {
                 muestraVentana(mensajecero);
                 break;
             case 1:
-               
+
                 muestraVentana('Información almacenada correctamente');
                 setTimeout("ocultarPestanas('Pest_equipoLectura')", 50);
 
@@ -334,7 +364,7 @@ function ventanaRespuesta_processResponse(res) {
             case 2:
                 muestraVentana('Información Actualizada correctamente');
                 // $.fancybox.close();
-              
+
                 //listarGeneral(1);
                 setTimeout("ocultarPestanas('Pest_equipoLectura')", 50);
 
@@ -342,7 +372,7 @@ function ventanaRespuesta_processResponse(res) {
 
             case 4:
                 muestraVentana('NO SE PUEDE BORRAR EL áREA, HAY CARGOS');
-                $.fancybox.close();               
+                $.fancybox.close();
                 usuarioGlobal = "-1";
                 break;
             case 5:
@@ -507,9 +537,9 @@ function validaEdad_processResponse(res) {
 
 
 function cargarTipoDocumento() {
-    
+
     var arrayParameters = new Array();
-    arrayParameters.push(newArg('p', 'cargarTipoDocumento'));   
+    arrayParameters.push(newArg('p', 'cargarTipoDocumento'));
     var send = arrayParameters.join('&');
     $.post('../../Controlador/ctlLogin.aspx', send, cargarTipo_Documento);
 }
@@ -591,7 +621,7 @@ function cargar_RH(res) {
                 muestraVentana(mensajemenosuno);
                 break;
             case 0:
-                 muestraVentana(mensajecero);
+                muestraVentana(mensajecero);
                 break;
             case 1:
                 llenarSelect(res, document.getElementById('rh'));
@@ -630,7 +660,7 @@ function cargar_Info(res) {
                 muestraVentana(mensajemenosuno);
                 break;
             case 0:
-              muestraVentana(mensajecero);
+                muestraVentana(mensajecero);
                 break;
             case 1:
 
@@ -943,7 +973,7 @@ function seleccion(a, chk) {
             }
             break;
     }
- 
+
 
 }
 
@@ -1008,7 +1038,7 @@ function validaDocumento(e) {
 }
 
 function nuevoUsuario() {
-   
+
     setTimeout("ocultarPestanas('Pest_puntoVenta')", 50);
     $.fancybox({
         'showCloseButton': false,
