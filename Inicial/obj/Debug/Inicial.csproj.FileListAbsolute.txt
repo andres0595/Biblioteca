@@ -24,3 +24,14 @@ D:\Biblioteca\Inicial\bin\Inicial.pdb
 D:\Biblioteca\Inicial\bin\Microsoft.SqlServer.Types.dll
 D:\Biblioteca\Inicial\obj\Debug\Inicial.dll
 D:\Biblioteca\Inicial\obj\Debug\Inicial.pdb
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\bin\Inicial.dll.config
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\bin\Inicial.dll
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\bin\Inicial.pdb
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\bin\Microsoft.SqlServer.Types.dll
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\obj\Debug\Inicial.csprojResolveAssemblyReference.cache
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\obj\Debug\Inicial.dll
+C:\Users\FAMILIA GUERRERO\Desktop\Biblioteca\Biblioteca-master\Inicial\obj\Debug\Inicial.pdb

@@ -1,27 +1,38 @@
 ﻿$(document).ready(function () /*dindica que nuesstra función listarDatos(n) se ejecuta al iniciar.*/ {
 
-    listarCitaMedica(1);
-    cargarEspecialidades();
+    listarSolicitudes(1);
+
+    $("#txtfechasolicitud").datepicker({
+        changeMonth: true,
+        changeYear: true
+    });
 });
 
 /////////////// VARIABLES GLOBALES /////////////////
 
 var idGlobal = "-1"; // id para crear o modificar alarmas
 
+function fechaSistema() {
+    var f = new Date();
+    var meses = new Array("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12");
+    var fechaActual;
+    var dia = "";
+    dia = dia + f.getDate();
+    var tam = dia.length;
+    fechaActual = ((tam == 1) ? "0" + f.getDate() : f.getDate()) + "/" + meses[f.getMonth()] + "/" + f.getFullYear(); //descomentar si el dia de la fecha sale con un solo digito
+    return fechaActual;
+}
+
+
 function limpiar() {
-    document.getElementById("txtNombre").value = '';
-    document.getElementById("txtFiltTramite").value = '';
-    document.getElementById('txtcodigo').value = '';
-    document.getElementById('txtcodigo').disabled = false;
-    document.getElementById('selEspecialidad').value = '-1';
-    document.getElementById('selFiltEspecialidad').value = '-1';
-    document.getElementById('txtFiltCodOSI').value = '';
-    document.getElementById('txtFiltTramite').value = '';
+    document.getElementById("txtfechasolicitud").value = '';
+    document.getElementById("selTipoLibro").value = '-1';
+    document.getElementById('txtNombre').value = '';
 }
 
 function verTodos() {
     limpiar();
-    listarCitaMedica(1);
+    listarSolicitudes(1);
 }
 
 ///**** Cierra los fancy
@@ -36,121 +47,48 @@ function abrirFiltro() {
 }
 
 function NuevaSolicitud() {
+
+    document.getElementById("txtfechasolicitud").value = fechaSistema();
     idGlobal = "-1";
     OpenFancy('#Divsolicitud');
 }
 
 
-function GuardarCitaMedica() {
-
-    var id = idGlobal;
-    var codigo = document.getElementById('txtcodigo').value;
-    var especialidad = document.getElementById('selEspecialidad').value;
-    var nombre = document.getElementById('txtNombre').value;
-
-    if (nombre != "" && codigo != "" && especialidad != "-1") {
-
-        var arrayParameters = new Array();
-        arrayParameters.push(newArg('p', 'GuardarCitaMedica'));
-        arrayParameters.push(newArg('id', id));
-        arrayParameters.push(newArg('codigo', codigo));
-        arrayParameters.push(newArg('especialidad', especialidad));
-        arrayParameters.push(newArg('nombre', nombre));
-        var send = arrayParameters.join('&');
-        $.post('../../Controlador/ctlGeneral.aspx', send, GuardarCitaMedica_processResponse);
-        muestraVentanaProgreso("cargando ...");
-    }
-
-    else {
-        muestraVentana(mensajeobligatorios);
-    }
-}
-function GuardarCitaMedica_processResponse(res) {
-    ocultaVentanaProgreso();
-    try {
-        var info = eval('(' + res + ')');
-
-        switch (info) {
-            case -1:
-                muestraVentana(mensajemenosuno);
-                break;
-            case 1:
-                listarCitaMedica(1);
-                muestraVentana('CÓDIGO OSI ALMACENADO CORRECTAMENTE');
-                idGlobal = "-1";
-                $.fancybox.close();
-                break;
-            case 2:
-                listarCitaMedica(1);
-                muestraVentana('CÓDIGO OSI ACTUALIZADO CORRECTAMENTE');
-                idGlobal = "-1";
-                $.fancybox.close();
-                break;
-            case 3:
-                listarCitaMedica(1);
-                muestraVentana('CÓDIGO OSI ELIMINADO CORRECTAMENTE');
-                idGlobal = "-1";
-                $.fancybox.close();
-                break;
-            case 4:
-                muestraVentana('NO SE PUEDE ELIMINAR EL CÓDIGO OSI<br />ESTA RELACIONADO EN ALGÚN TRÁMITE');
-                $.fancybox.close();
-                break;
-            case 5:
-                muestraVentana('YA EXISTE UN CÓDIGO OSI CON ESTE NOMBRE');
-                idGlobal = "-1";
-                limpiar();
-                break;
-            case 6:
-                muestraVentana('YA EXISTE UN CÓDIGO OSI CON ESTE CÓDIGO');
-                idGlobal = "-1";
-                limpiar();
-                break;
-        }
-    } catch (elError) {
-    }
-}
-
-function listarCitaMedica(pag) {
+function listarSolicitudes(pag) {
     pagGlobal = pag;
 
-    var especialidad = document.getElementById('selFiltEspecialidad').value;
-    var codigo = document.getElementById('txtFiltCodOSI').value;
-    var nombre = document.getElementById('txtFiltTramite').value;
+    var fechaSolicitud = document.getElementById('txtfechasolicitudFiltro').value;
+    var tipolibro = document.getElementById('selTipoLibroFiltro').value;
 
     var arrayParameters = new Array();
-    arrayParameters.push(newArg('p', 'listarCitaMedica'));
-    arrayParameters.push(newArg('especialidad', especialidad));
-    arrayParameters.push(newArg('codigo', codigo));
-    arrayParameters.push(newArg('nombre', nombre));
+    arrayParameters.push(newArg('p', 'paBLI_solicitudes_listar'));
+    arrayParameters.push(newArg('fechaSolicitud', fechaSolicitud));
+    arrayParameters.push(newArg('tipolibro', tipolibro))
     arrayParameters.push(newArg('pag', pag));
     var send = arrayParameters.join('&');
-    $.post('../../Controlador/ctlPaginador.aspx', send, listarCitaMedica_processResponse);
+    $.post('../../Controlador/ctlPaginador.aspx', send, listarSolicitudes_processResponse);
     muestraVentanaProgreso("cargando ...");
 }
 
-function listarCitaMedica_processResponse(res) {
+function listarSolicitudes_processResponse(res) {
 
     try {
         var info = eval('(' + res + ')');
-        var divTerceros = document.getElementById('divlistadocitas');
+        var divTerceros = document.getElementById('divListado');
         if (res != '0') {
             ocultaVentanaProgreso();
             var datosRows = info.data;
             var l = info.cols;
             var ctl = true, claseAplicar = "", claseAplicar1 = "", claseAplicar2 = "";
 
-
-
-            var tabla = "<table class='tbListado centrar' style='text-align: center;'><tr><td class='encabezado' colspan='6'>CÓDIGOS OSI EXISTENTES</td></tr>";
-            tabla += "<tr><td class='encabezado' >TIPO DE SERVICIO</td><td class='encabezado' >C&Oacute;DIGO OSI</td><td class='encabezado'>NOMBRE</td><td class='encabezado'>DETALLE</td><td class='encabezado'>EDITAR</td><td class='encabezado'>ELIMINAR</td></tr>";
+            var tabla = "<table class='tbListado centrar' style='text-align: center;'><tr><td class='encabezado' colspan='6'>SOLICITUDES EXISTENTES</td></tr>";
+            tabla += "<tr><td class='encabezado' >FECHA SOLICITUD</td><td class='encabezado' >USUARIO</td><td class='encabezado'>TIPO LIBRO</td><td class='encabezado'>DETALLE</td><td class='encabezado'>EDITAR</td><td class='encabezado'>ELIMINAR</td></tr>";
 
             for (var i = 0; i < datosRows.length; i += l) {
                 var id = datosRows[i]
-                var codigo = datosRows[i + 1];
-                var nombre = datosRows[i + 2];
-                var espec = datosRows[i + 3];
-                var espec_nombre = datosRows[i + 4];
+                var fechasolicitud = datosRows[i + 1];
+                var usuario = datosRows[i + 2];
+                var tipoLibro = datosRows[i + 3];
 
                 if (ctl) {
                     claseAplicar = "cuerpoListado9";
@@ -161,15 +99,86 @@ function listarCitaMedica_processResponse(res) {
                 }
 
                 ctl = !ctl;
-                tabla += '<tr><td class="' + claseAplicar + '" align="center">' + unescape(espec_nombre).toUpperCase() + '</td><td class="' + claseAplicar2 + '" align="center">' + unescape(codigo).toUpperCase() + '</td><td class="' + claseAplicar + '" align="center">' + nombre.substring(0, 30) + '...</td>';
-                tabla += '<td class="' + claseAplicar2 + '"><div id="linkDetalle" class="linkIconoLateral botonDetalle" onclick="detalle( \'' + codigo.toUpperCase() + '\',\'' + nombre.toUpperCase() + '\' ,\'' + espec.toUpperCase() + '\',\'' + espec_nombre.toUpperCase() + '\'  )"><img height="16px" width="16px" src="../../Recursos/imagenes/administracion/listar.png"><p>Detalle</p></div></td>'; //copia los datos de la fila seleccionada
-                tabla += '<td class="' + claseAplicar2 + '"><div id="linkEdita" class="linkIconoLateral botonEditar" onclick="editarCita( \'' + id + '\',\'' + codigo + '\',\'' + nombre.toUpperCase() + '\',\'' + espec + '\')"><img height="16px" width="16px" src="../../Recursos/imagenes/administracion/editar_24x24.png"><p>Editar</p></div></td>';
-                tabla += '<td class="' + claseAplicar2 + '"><div id="linkElimina" class="linkIconoLateral botonEliminar" onclick="eliminarCita(\'' + codigo + '\',\'' + nombre + '\')"><img height="16px" width="16px" src="../../Recursos/imagenes/administracion/eliminar_24x24.png"><p>Eliminar</p></div></td></tr>';
+                tabla += '<tr><td class="' + claseAplicar + '" align="center">' + unescape(fechasolicitud).toUpperCase() + '</td>';
+                tabla += '<td class="' + claseAplicar2 + '" align="center">' + unescape(usuario).toUpperCase() + '</td>';
+                tabla += '<td class="' + claseAplicar2 + '" align="center">' + unescape(tipoLibro).toUpperCase() + '</td>';
+                tabla += '<td class="' + claseAplicar2 + '"><div id="linkDetalle" class="linkIconoLateral botonDetalle" onclick="detalle( \'' + id+ '\'  )"><img height="16px" width="16px" src="../../Recursos/imagenes/administracion/listar.png"><p>Detalle</p></div></td>';
+                tabla += '<td class="' + claseAplicar2 + '"><div id="linkEdita" class="linkIconoLateral botonEditar" onclick="editarCita( \'' + id + '\')"><img height="16px" width="16px" src="../../Recursos/imagenes/administracion/editar_24x24.png"><p>Editar</p></div></td>';
+                tabla += '<td class="' + claseAplicar2 + '"><div id="linkElimina" class="linkIconoLateral botonEliminar" onclick="eliminarCita(\'' + id + '\')"><img height="16px" width="16px" src="../../Recursos/imagenes/administracion/eliminar_24x24.png"><p>Eliminar</p></div></td></tr>';
 
             }
             tabla += '</table>'
             divTerceros.innerHTML = tabla;
-            divTerceros.innerHTML += pieDePaginaListar(info, 'listarCitaMedica');
+            divTerceros.innerHTML += pieDePaginaListar(info, 'listarSolicitudes');
+            var idMenuForm = document.getElementById('idMenuForm').innerHTML;
+            permisosParaMenu(idMenuForm);
+        } else {
+            ocultaVentanaProgreso();
+            divTerceros.innerHTML = ("AÚN NO SE HAN REGISTRADO SOLICITUDES");
+        }
+    } catch (elError) {
+    }
+    $.fancybox.close();
+}
+
+
+function buscarLibro() {
+    listarLibros(1);
+    OpenFancy('#Divlibros');
+}
+
+function listarLibros(pag) {
+    pagGlobal = pag;
+
+    var codigolibro = document.getElementById('txtcodfiltro').value;
+    var nombrelibro = document.getElementById('txtnombrefiltro').value;
+
+    var arrayParameters = new Array();
+    arrayParameters.push(newArg('p', ' paBLI_libros_listar'));
+    arrayParameters.push(newArg('codigolibro', codigolibro));
+    arrayParameters.push(newArg('nombrelibro', nombrelibro))
+    arrayParameters.push(newArg('pag', pag));
+    var send = arrayParameters.join('&');
+    $.post('../../Controlador/ctlPaginador.aspx', send, listarLibros_processResponse);
+    muestraVentanaProgreso("cargando ...");
+}
+
+function listarLibros_processResponse(res) {
+
+    try {
+        var info = eval('(' + res + ')');
+        var divTerceros = document.getElementById('divlistadolibros');
+        if (res != '0') {
+            ocultaVentanaProgreso();
+            var datosRows = info.data;
+            var l = info.cols;
+            var ctl = true, claseAplicar = "", claseAplicar1 = "", claseAplicar2 = "";
+
+            var tabla = "<table class='tbListado centrar' style='text-align: center;'><tr><td class='encabezado' colspan='6'>SOLICITUDES EXISTENTES</td></tr>";
+            tabla += "<tr><td class='encabezado' >CÓDIGO LIBRO</td><td class='encabezado' >NOMBRE LIBRO</td><td class='encabezado'>ASIGNAR</td></tr>";
+
+            for (var i = 0; i < datosRows.length; i += l) {
+                var codigo = datosRows[i]
+                var nombre = datosRows[i + 1];
+
+                if (ctl) {
+                    claseAplicar = "cuerpoListado9";
+                    claseAplicar2 = "cuerpoListado3";
+                } else {
+                    claseAplicar = "cuerpoListado10";
+                    claseAplicar2 = "cuerpoListado5";
+                }
+
+                ctl = !ctl;
+                tabla += '<tr><td class="' + claseAplicar + '" align="center">' + unescape(codigo).toUpperCase() + '</td>';
+                tabla += '<td class="' + claseAplicar2 + '" align="center">' + unescape(nombre).toUpperCase() + '</td>';
+                tabla += '<td class="' + claseAplicar2 + '"><div id="linkDetalle" class="linkIconoLateral botonAsignar" onclick="Asignarlibros(\'' + codigo + '\',\'' + nombre + '\')"><img height="16px" width="16px" src="../../Recursos/imagenes/administracion/listar.png"><p>Detalle</p></div></td>';
+               
+
+            }
+            tabla += '</table>'
+            divTerceros.innerHTML = tabla;
+            divTerceros.innerHTML += pieDePaginaListar(info, 'listarLibros');
             var idMenuForm = document.getElementById('idMenuForm').innerHTML;
             permisosParaMenu(idMenuForm);
         } else {
@@ -181,103 +190,8 @@ function listarCitaMedica_processResponse(res) {
     $.fancybox.close();
 }
 
-function editarCita(id, codigo, nombre, espec) {
-
-    idGlobal = id;
-    document.getElementById("txtcodigo").value = unescape(codigo);
-    document.getElementById("txtcodigo").disabled = true;
-    document.getElementById("txtNombre").value = unescape(nombre);
-    document.getElementById('selEspecialidad').value = unescape(espec);
-    $.fancybox({
-        'showCloseButton': false,
-        'hideOnOverlayClick': false,
-        'transitionIn': 'fade',
-        'transitionOut': 'fade',
-        'transitionOut': 'fade',
-        'enableEscapeButton': false,
-        'href': '#divNuevo'
-    });
-}
-
-function eliminarCita(codigo, nombre) {
-    idGlobal = codigo;
-    document.getElementById('lblcitamedica').innerHTML = nombre;
-    $.fancybox({
-        'showCloseButton': false,
-        'hideOnOverlayClick': false,
-        'transitionIn': 'fade',
-        'transitionOut': 'fade',
-        'transitionOut': 'fade',
-        'enableEscapeButton': false,
-        'href': '#EliminarConfirma'
-    });
-}
-function eliminarCitaMedica() {
-
-    var arrayParameters = new Array();
-    arrayParameters.push(newArg('p', 'eliminarCitaMedica'));
-    arrayParameters.push(newArg('id', idGlobal));
-    var send = arrayParameters.join('&');
-    $.post('../../Controlador/ctlGeneral.aspx', send, GuardarCitaMedica_processResponse);
-    muestraVentanaProgreso("cargando ...");
-}
-
-function cargarEspecialidades() {
-
-    var arrayParameters = new Array();
-    arrayParameters.push(newArg('p', 'cargarEspecialidades'));
-    var send = arrayParameters.join('&');
-    $.post('../../Controlador/ctlGeneral.aspx', send, cargarEspecialidades_processResponse);
-}
-
-function cargarEspecialidades_processResponse(res) {
-    try {
-        var info = eval('(' + res + ')');
-        var msj = info.msj;
-        switch (msj) {
-            case -1:
-                muestraVentana(mensajemenosuno);
-                break;
-            case 0:
-                muestraVentana(mensajecero);
-                break;
-            case 1:
-                llenarSelect(res, document.getElementById('selEspecialidad'));
-                llenarSelect(res, document.getElementById('selFiltEspecialidad'));
-                break;
-        }
-    } catch (elError) { }
-}
-
-function detalle(codigo, nombre, espec, espec_nombre) {
-
-    var tabla = "";
-    var vacio = "--";
-
-    tabla += "<table class='tbListado centrar' style='text-align: center;' colspan='2'>";
-    tabla += "<tr>";
-    tabla += "<td class='encabezado'>TIPO DE SERVICIO</td><td class='encabezado'>C&Oacute;DIGO OSI</td></tr>";
-
-    tabla += '<td class="cuerpoListado10">' + ((espec_nombre == "") ? vacio : unescape(espec_nombre).toUpperCase()) + '</td>';
-    tabla += '<td class="cuerpoListado10">' + ((codigo == "") ? vacio : unescape(codigo).toUpperCase()) + '</td></tr>';
-
-    tabla += "<tr><td class='encabezado' colspan ='2'>NOMBRE TR&Aacute;MITE</td></tr>";
-    tabla += '<td class="cuerpoListado10" colspan="2">' + ((nombre == "") ? vacio : unescape(nombre).toUpperCase()) + '</td></tr>';
-
-    tabla += '</tr>';
-    tabla += "</table>";
-    document.getElementById("DivListadoDetalleTramite").innerHTML = tabla;
-
-
-    $.fancybox({
-        'showCloseButton': false,
-        'hideOnOverlayClick': false,
-        'enableEscapeButton': false,
-        'transitionIn': 'fade',
-        'transitionOut': 'fade',
-        'transitionOut': 'fade',
-        'href': '#divDetalleTramite'
-    });
-
-
+function Asignarlibros(codigo,nombre) {
+    document.getElementById("txtcodigo").value = codigo;
+    document.getElementById("txtNombre").value = nombre;
+    OpenFancy('#Divsolicitud');
 }

@@ -1223,6 +1223,7 @@
     </Compile>
     <Compile Include="Vista\general\inicio.aspx.cs">
       <DependentUpon>inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Vista\general\inicio.aspx.designer.cs">
       <DependentUpon>inicio.aspx</DependentUpon>
